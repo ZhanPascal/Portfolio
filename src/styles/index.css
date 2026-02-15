@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: 'Inter', system-ui, sans-serif;
+
+  /* 温暖 - Warm palette */
+  --color-primary-50: #FFF8F0;
+  --color-primary-100: #FFEDD5;
+  --color-primary-200: #FED7AA;
+  --color-primary-300: #FDBA74;
+  --color-primary-400: #FB923C;
+  --color-primary-500: #E8853A;
+  --color-primary-600: #D97706;
+  --color-primary-700: #B45309;
+  --color-primary-800: #92400E;
+  --color-primary-900: #78350F;
+
+  --color-soft-50: #FFFBF5;
+  --color-soft-100: #FEF3E2;
+  --color-soft-200: #F5E6D3;
+  --color-soft-300: #E8D5BE;
+  --color-soft-400: #B8A08A;
+  --color-soft-500: #8B7355;
+  --color-soft-600: #6B5A42;
+  --color-soft-700: #4A3F30;
+  --color-soft-800: #2C2418;
+  --color-soft-900: #1A1410;
+
+  --color-accent-gold: #F6C748;
+  --color-accent-rose: #E8A598;
+  --color-accent-sage: #A8C4A0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.dark {
+  color-scheme: dark;
+}
+
+/* Print styles for CV */
+@media print {
+  .no-print { display: none !important; }
+  body { background: white; }
+  .cv-container { box-shadow: none !important; border: none !important; }
+}

@@ -1,0 +1,111 @@
+{
+  "nav": {
+    "about": "À propos",
+    "experience": "Expérience",
+    "education": "Formation",
+    "projects": "Projets",
+    "skills": "Compétences",
+    "contact": "Contact",
+    "cv": "CV"
+  },
+  "hero": {
+    "greeting": "Bonjour, je suis",
+    "title": "Développeur DevOps & Étudiant en Cybersécurité",
+    "tagline": "Recherche active : Stage M1 (avril-septembre 2026) + Alternance M2",
+    "cta": "Me contacter",
+    "viewCv": "Voir mon CV"
+  },
+  "about": {
+    "title": "À Propos",
+    "p1": "Étudiant en Master 1 Informatique parcours Conception des Systèmes et Cybersécurité à l'UPEC, je combine une solide expérience professionnelle en développement full-stack et DevOps avec un intérêt marqué pour l'Intelligence Artificielle, la Data Science et la cybersécurité.",
+    "p2": "Fort de 2+ ans d'alternance chez CGI France, j'ai développé un portail de gestion d'infrastructure en Java/Vue.js, automatisé la gestion de plus de 2000 machines virtuelles et conçu une application de self-provisioning qui a réduit les délais de déploiement de 2 semaines à 2 heures (-98%).",
+    "p3": "Finaliste TOP 6 du Hackathon AgentsIRL 2025 avec TruthTrace, une application d'analyse automatisée de débats par IA combinant orchestration multi-agents (LangGraph), transcription audio (OpenAI Whisper) et analyse sémantique (Mistral), déployée sur Google Cloud Run.",
+    "p4": "Actuellement, je travaille sur un projet IoT (station météo ESP32 + MicroPython + MQTT) et j'approfondis mes connaissances en cybersécurité offensive et défensive dans le cadre de mon Master.",
+    "bilingual": "Bilingue français-chinois natif (母语), un atout pour la communication au sein d'équipes internationales et la traduction technique.",
+    "languages": "Langues : Français (Natif), Chinois Mandarin (Natif / 母语), Anglais (B2), Japonais (Notions), Coréen (Notions)",
+    "interests": "Disponible pour échanger sur des opportunités en IA/Data Science, DevOps, Cybersécurité ou IoT."
+  },
+  "experience": {
+    "title": "Expérience Professionnelle",
+    "cgi": {
+      "position": "Développeur Java / DevOps",
+      "type": "Alternance (2 ans)",
+      "description": "Développement full-stack d'un portail interne de gestion d'infrastructure automatisant le déploiement sécurisé des environnements de projet. Stack : Java, Vue.js, PostgreSQL, Docker, Jenkins.",
+      "achievements": [
+        "Automatisation des modifications de VM (RAM, CPU, disques) selon les normes de sécurité — gestion asynchrone des jobs Hyper-V/VMware",
+        "Développement d'une application de self-provisioning → Réduction des délais de 2 semaines à 2 heures (-98%)",
+        "Intégration complète du Web Application Firewall (WAF) au portail et ajustement de la tarification associée",
+        "Maintenance en conditions opérationnelles : surveillance des tâches automatisées, mise en place de mesures préventives",
+        "Gestion des sauvegardes datacenter : coordination des procédures de sauvegarde croisée multi-sites",
+        "Participation à la migration de VM vers une infrastructure plus performante",
+        "Mise en œuvre de Gitflow : gestion des branches, résolution de conflits et intégration continue"
+      ]
+    }
+  },
+  "education": {
+    "title": "Formation",
+    "upec": {
+      "degree": "Master 1 Informatique",
+      "specialization": "Conception des Systèmes et Cybersécurité",
+      "description": "Formation spécialisée en cybersécurité et conception de systèmes informatiques. Rythme alternance 1 semaine école / 1 semaine entreprise.",
+      "current": "En cours"
+    },
+    "but": {
+      "degree": "BUT Informatique",
+      "specialization": "Réalisation d'applications",
+      "description": "Parcours Réalisation d'applications : conception, développement, validation d'applications informatiques. Développement full-stack, bases de données, méthodes agiles."
+    }
+  },
+  "projects": {
+    "title": "Projets",
+    "truthtrace": {
+      "subtitle": "Analyse de Débats par IA",
+      "achievement": "TOP 6 Hackathon AgentsIRL 2025",
+      "description": "Application full-stack d'analyse automatisée de vidéos de débats par Intelligence Artificielle. Transcription automatique (Whisper), identification des locuteurs, classification d'arguments (Mistral), fact-checking automatisé et évaluation multi-dimensionnelle."
+    },
+    "esp32": {
+      "subtitle": "Station Météorologique IoT",
+      "description": "Système de collecte et analyse de données environnementales en temps réel. Architecture complète : ESP32 + capteur DHT11, firmware MicroPython, protocole MQTT, backend Flask + PostgreSQL, le tout conteneurisé avec Docker."
+    },
+    "security": {
+      "subtitle": "Outils de Cybersécurité",
+      "description": "Scanner de ports multithreadé en Python pour identifier les services ouverts et détecter les versions. Script d'audit de robustesse des mots de passe avec attaque par dictionnaire."
+    },
+    "status": {
+      "inProgress": "En cours",
+      "completed": "Terminé"
+    },
+    "viewCode": "Voir le code"
+  },
+  "skills": {
+    "title": "Compétences Techniques",
+    "categories": {
+      "languages": "Langages de Programmation",
+      "ai-data": "IA & Data Science",
+      "devops": "DevOps & Cloud",
+      "databases": "Bases de Données",
+      "security": "Cybersécurité",
+      "iot": "IoT & Systèmes Embarqués",
+      "tools": "Outils & Méthodologies"
+    }
+  },
+  "contact": {
+    "title": "Me Contacter",
+    "subtitle": "Je recherche actuellement un stage M1 (avril-septembre 2026) et une alternance M2. N'hésitez pas à me contacter !",
+    "email": "Email",
+    "availability": "Disponibilité",
+    "internship": "Stage M1 : Avril - Septembre 2026",
+    "alternance": "Alternance M2 : À partir de septembre 2026",
+    "sendEmail": "Envoyer un email"
+  },
+  "cv": {
+    "title": "Mon CV",
+    "download": "Télécharger le CV",
+    "print": "Imprimer le CV",
+    "back": "Retour au portfolio",
+    "placeholder": "Le CV sera bientôt disponible. Veuillez revenir plus tard ou me contacter directement."
+  },
+  "footer": {
+    "rights": "Tous droits réservés"
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "nav": {
+    "about": "About",
+    "experience": "Experience",
+    "education": "Education",
+    "projects": "Projects",
+    "skills": "Skills",
+    "contact": "Contact",
+    "cv": "Resume"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "title": "DevOps Developer & Cybersecurity Student",
+    "tagline": "Actively seeking: M1 Internship (April-September 2026) + M2 Apprenticeship",
+    "cta": "Get in touch",
+    "viewCv": "View my Resume"
+  },
+  "about": {
+    "title": "About Me",
+    "p1": "Master 1 Computer Science student specializing in Systems Design and Cybersecurity at UPEC, I combine solid professional experience in full-stack development and DevOps with a strong interest in Artificial Intelligence, Data Science and cybersecurity.",
+    "p2": "With 2+ years of apprenticeship at CGI France, I developed an infrastructure management portal in Java/Vue.js, automated the management of over 2,000 virtual machines and built a self-provisioning application that reduced deployment delays from 2 weeks to 2 hours (-98%).",
+    "p3": "TOP 6 finalist at the AgentsIRL 2025 Hackathon with TruthTrace, an automated AI debate analysis application combining multi-agent orchestration (LangGraph), audio transcription (OpenAI Whisper) and semantic analysis (Mistral), deployed on Google Cloud Run.",
+    "p4": "Currently working on an IoT project (ESP32 weather station + MicroPython + MQTT) and deepening my knowledge in offensive and defensive cybersecurity as part of my Master's program.",
+    "bilingual": "Native French-Chinese bilingual (母语), an asset for communication within international teams and technical translation.",
+    "languages": "Languages: French (Native), Mandarin Chinese (Native / 母语), English (B2), Japanese (Basics), Korean (Basics)",
+    "interests": "Open to discussing opportunities in AI/Data Science, DevOps, Cybersecurity or IoT."
+  },
+  "experience": {
+    "title": "Work Experience",
+    "cgi": {
+      "position": "Java / DevOps Developer",
+      "type": "Apprenticeship (2 years)",
+      "description": "Full-stack development of an internal infrastructure management portal automating secure deployment of project environments. Stack: Java, Vue.js, PostgreSQL, Docker, Jenkins.",
+      "achievements": [
+        "Automated VM modifications (RAM, CPU, disks) according to security standards — asynchronous job management for Hyper-V/VMware",
+        "Developed a self-provisioning application → Reduced delays from 2 weeks to 2 hours (-98%)",
+        "Full integration of Web Application Firewall (WAF) into the portal and associated pricing adjustments",
+        "Operational maintenance: monitoring of automated tasks, implementation of preventive measures",
+        "Datacenter backup management: coordination of cross-site backup procedures",
+        "Participated in VM migration to higher-performance infrastructure",
+        "Implemented Gitflow methodology: branch management, conflict resolution and continuous integration"
+      ]
+    }
+  },
+  "education": {
+    "title": "Education",
+    "upec": {
+      "degree": "Master 1 Computer Science",
+      "specialization": "Systems Design & Cybersecurity",
+      "description": "Specialized training in cybersecurity and computer systems design. Alternating schedule: 1 week university / 1 week company.",
+      "current": "In progress"
+    },
+    "but": {
+      "degree": "BUT Computer Science",
+      "specialization": "Application Development",
+      "description": "Application Development track: design, development, and validation of software applications. Full-stack development, databases, agile methodologies."
+    }
+  },
+  "projects": {
+    "title": "Projects",
+    "truthtrace": {
+      "subtitle": "AI Debate Analysis",
+      "achievement": "TOP 6 AgentsIRL Hackathon 2025",
+      "description": "Full-stack application for automated AI analysis of debate videos. Automatic transcription (Whisper), speaker identification, argument classification (Mistral), automated fact-checking and multi-dimensional evaluation."
+    },
+    "esp32": {
+      "subtitle": "IoT Weather Station",
+      "description": "Real-time environmental data collection and analysis system. Complete architecture: ESP32 + DHT11 sensor, MicroPython firmware, MQTT protocol, Flask + PostgreSQL backend, fully containerized with Docker."
+    },
+    "security": {
+      "subtitle": "Cybersecurity Tools",
+      "description": "Multithreaded Python port scanner for identifying open services and detecting versions. Password strength audit script with dictionary attack capabilities."
+    },
+    "status": {
+      "inProgress": "In Progress",
+      "completed": "Completed"
+    },
+    "viewCode": "View code"
+  },
+  "skills": {
+    "title": "Technical Skills",
+    "categories": {
+      "languages": "Programming Languages",
+      "ai-data": "AI & Data Science",
+      "devops": "DevOps & Cloud",
+      "databases": "Databases",
+      "security": "Cybersecurity",
+      "iot": "IoT & Embedded Systems",
+      "tools": "Tools & Methodologies"
+    }
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "I'm currently seeking an M1 internship (April-September 2026) and an M2 apprenticeship. Feel free to reach out!",
+    "email": "Email",
+    "availability": "Availability",
+    "internship": "M1 Internship: April - September 2026",
+    "alternance": "M2 Apprenticeship: Starting September 2026",
+    "sendEmail": "Send an email"
+  },
+  "cv": {
+    "title": "My Resume",
+    "download": "Download Resume",
+    "print": "Print Resume",
+    "back": "Back to portfolio",
+    "placeholder": "Resume will be available soon. Please check back later or contact me directly."
+  },
+  "footer": {
+    "rights": "All rights reserved"
+  }
+}
