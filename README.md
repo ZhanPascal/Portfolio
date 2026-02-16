@@ -1,21 +1,25 @@
 # Pascal ZHAN - Portfolio
 
-Portfolio personnel bilingue (FR/EN) avec un design 温暖 (chaleureux) aux tons ambrés et dorés.
+Portfolio personnel trilingue (FR/EN/中文) avec un design 温暖 (chaleureux) aux tons ambrés et dorés.
 
 ## Stack technique
 
 - **React 19** + **TypeScript** via Vite
 - **Tailwind CSS v4** (palette warm custom)
 - **Framer Motion** (animations)
-- **react-i18next** (bilingue FR/EN)
+- **react-i18next** (trilingue FR/EN/ZH)
 - **React Router** (navigation SPA)
 
 ## Fonctionnalités
 
-- Switch de langue FR / EN
+- Switch de langue FR / EN / 中 (sélecteur visuel)
 - Dark mode avec persistance localStorage
 - Navigation smooth scroll avec section active
 - Responsive (mobile, tablette, desktop)
+- 9 projets avec pages de détail individuelles (`/projects/:id`)
+- Page listing de tous les projets (`/projects`)
+- Cards cliquables vers les détails (contexte, rôle, défis techniques, résultats, stack)
+- Intégration iframe pour les projets avec contenu HTML (ex: Jupyter)
 - Page CV dédiée (`/cv`) :
   - Affiche le PDF si disponible (`public/cv/cv-fr.pdf` / `cv-en.pdf`)
   - Génère automatiquement un CV HTML depuis les données du site sinon
@@ -55,7 +59,7 @@ src/
 ├── components/
 │   ├── common/        Button, Card, Section, SkillBadge
 │   ├── layout/        Header, Footer
-│   ├── pages/         CvPage, CvGenerated
+│   ├── pages/         CvPage, CvGenerated, ProjectsPage, ProjectDetailPage
 │   └── sections/      Hero, About, Experience, Education, Projects, Skills, Contact
 ├── data/              Données structurées (personal, experience, education, projects, skills)
 ├── hooks/             useTheme, useScrollSpy
@@ -63,7 +67,7 @@ src/
 └── utils/             Configuration i18n
 public/
 ├── cv/                CV PDF (à fournir : cv-fr.pdf, cv-en.pdf)
-└── locales/           Traductions FR / EN
+└── locales/           Traductions FR / EN / ZH
 ```
 
 ## Modifier le contenu
