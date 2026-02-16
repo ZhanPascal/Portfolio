@@ -29,7 +29,8 @@ export function Header() {
     <header className="fixed top-0 left-0 right-0 bg-white/80 dark:bg-soft-900/80 backdrop-blur-lg border-b border-soft-100 dark:border-soft-800 z-50">
       <nav className="container mx-auto px-6 py-4 max-w-5xl">
         <div className="flex justify-between items-center">
-          <Link to="/" className="text-lg font-bold text-soft-900 dark:text-soft-50 hover:text-primary-500 transition-colors">
+          <Link to="/" className="flex items-center gap-2 text-lg font-bold text-soft-900 dark:text-soft-50 hover:text-primary-500 transition-colors">
+            <img src="/logo.png" alt="Logo" className="w-8 h-8 rounded-full object-cover" />
             Pascal ZHAN
           </Link>
 
