@@ -49,6 +49,14 @@ export function Header() {
                 {t(`nav.${s}`)}
               </button>
             ))}
+            {!isHome && (
+              <Link
+                to="/projects"
+                className="text-sm font-medium text-soft-500 dark:text-soft-400 hover:text-primary-500 transition-colors"
+              >
+                {t('nav.projects')}
+              </Link>
+            )}
             <Link
               to="/cv"
               className="text-sm font-medium px-4 py-1.5 rounded-xl bg-primary-50 dark:bg-primary-900/30 text-primary-600 dark:text-primary-300 hover:bg-primary-100 dark:hover:bg-primary-900/50 transition-colors"
@@ -96,6 +104,15 @@ export function Header() {
                 {t(`nav.${s}`)}
               </button>
             ))}
+            {!isHome && (
+              <Link
+                to="/projects"
+                onClick={() => setMenuOpen(false)}
+                className="block w-full text-left py-2 text-soft-600 dark:text-soft-300 hover:text-primary-500 text-sm"
+              >
+                {t('nav.projects')}
+              </Link>
+            )}
             <Link
               to="/cv"
               onClick={() => setMenuOpen(false)}

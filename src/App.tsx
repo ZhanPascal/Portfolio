@@ -9,6 +9,8 @@ import { Projects } from './components/sections/Projects';
 import { Skills } from './components/sections/Skills';
 import { Contact } from './components/sections/Contact';
 import { CvPage } from './components/pages/CvPage';
+import { ProjectsPage } from './components/pages/ProjectsPage';
+import { ProjectDetailPage } from './components/pages/ProjectDetailPage';
 
 function HomePage() {
   return (
@@ -33,6 +35,8 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/cv" element={<CvPage />} />
+            <Route path="/projects" element={<ProjectsPage />} />
+            <Route path="/projects/:id" element={<ProjectDetailPage />} />
           </Routes>
         </main>
         <Footer />

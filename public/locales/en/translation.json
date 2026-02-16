@@ -61,21 +61,156 @@
     "truthtrace": {
       "subtitle": "AI Debate Analysis",
       "achievement": "TOP 6 AgentsIRL Hackathon 2025",
-      "description": "Full-stack application for automated AI analysis of debate videos. Automatic transcription (Whisper), speaker identification, argument classification (Mistral), automated fact-checking and multi-dimensional evaluation."
+      "description": "Full-stack application for automated AI analysis of debate videos. Automatic transcription (Whisper), speaker identification, argument classification (Mistral), automated fact-checking and multi-dimensional evaluation.",
+      "detail": {
+        "context": "Project developed during the AgentsIRL 2025 Hackathon, an AI competition bringing teams together around creating intelligent agents. The goal was to design a tool capable of automatically analyzing debate videos to extract, classify and verify arguments made by each speaker.",
+        "role": "Development of the analysis pipeline: integration of multi-agent orchestration with LangGraph, implementation of automated fact-checking and multi-dimensional speaker scoring.",
+        "challenges": [
+          "Orchestrating multiple AI agents (transcription, diarization, classification, fact-checking) into a coherent pipeline via LangGraph",
+          "Speaker identification and separation in debate audio files using Pyannote.audio",
+          "Argument classification into categories (claims, evidence, rebuttals) using Mistral",
+          "Containerized deployment on Google Cloud Run with memory and processing time constraints"
+        ],
+        "results": "TOP 6 ranking at the hackathon. Functional application with interactive color-coded timeline, 4-level fact-checking verification and speaker scoring across 6 dimensions (factual accuracy, evidence quality, persuasiveness, etc.)."
+      }
     },
     "esp32": {
       "subtitle": "IoT Weather Station",
-      "description": "Real-time environmental data collection and analysis system. Complete architecture: ESP32 + DHT11 sensor, MicroPython firmware, MQTT protocol, Flask + PostgreSQL backend, fully containerized with Docker."
+      "description": "Real-time environmental data collection and analysis system. Complete architecture: ESP32 + DHT11 sensor, MicroPython firmware, MQTT protocol, Flask + PostgreSQL backend, fully containerized with Docker.",
+      "detail": {
+        "context": "Personal project aimed at designing a complete end-to-end IoT system: from sensor data collection to web visualization, including communication protocol and database storage.",
+        "role": "Design and development of the entire architecture: ESP32 firmware, MQTT broker, backend API and Docker containerization.",
+        "challenges": [
+          "ESP32 firmware programming in MicroPython with WiFi connection and MQTT protocol management",
+          "Setting up an MQTT broker for real-time communication between sensor and server",
+          "Flask API design with PostgreSQL storage for measurement history",
+          "Containerization of all services (backend, database, broker) with Docker Compose"
+        ],
+        "results": "Functional system collecting temperature and humidity data in real-time with history accessible via REST API. Reproducible architecture thanks to Docker."
+      }
     },
     "security": {
       "subtitle": "Cybersecurity Tools",
-      "description": "Multithreaded Python port scanner for identifying open services and detecting versions. Password strength audit script with dictionary attack capabilities."
+      "description": "Multithreaded Python port scanner for identifying open services and detecting versions. Password strength audit script with dictionary attack capabilities.",
+      "detail": {
+        "context": "Development of cybersecurity tools as part of the Cybersecurity Master's program at UPEC. The goal is to understand offensive techniques in order to better design defenses.",
+        "role": "Complete design and development of scanning and auditing tools.",
+        "challenges": [
+          "Implementation of a multithreaded port scanner to parallelize TCP connections and speed up detection",
+          "Service version detection through response banner analysis",
+          "Password audit script using dictionaries and mutation rules (substitutions, number appending)",
+          "Managing timeouts and result reliability on variable networks"
+        ],
+        "results": "Scanner capable of analyzing all 65,535 ports of a target in minutes. Audit tool identifying weak passwords according to ANSSI criteria."
+      }
+    },
+    "iaqa": {
+      "subtitle": "QA Fine-tuning on SQuAD",
+      "description": "Fine-tuning Question Answering models on the SQuAD dataset with web deployment. Full pipeline: model training, performance evaluation, and containerized web interface with Docker.",
+      "detail": {
+        "context": "University project (SAE) aimed at exploring fine-tuning of language models for extractive Question Answering. The SQuAD (Stanford Question Answering Dataset) serves as a benchmark for training and evaluating models.",
+        "role": "Development of the training pipeline, model evaluation and containerized web deployment setup.",
+        "challenges": [
+          "Fine-tuning Transformer models on the SQuAD dataset with hyperparameter optimization",
+          "Rigorous performance evaluation (F1-score, Exact Match) on test sets",
+          "Development of a web interface for asking questions on a given context",
+          "Containerization with Docker and CI/CD pipeline setup via GitHub Actions"
+        ],
+        "results": "Fine-tuned model with competitive performance on SQuAD. Deployed web application enabling real-time inference on arbitrary texts."
+      }
+    },
+    "gpt2": {
+      "subtitle": "Conversational AI Chatbot",
+      "description": "Intelligent chatbot based on GPT-2 with custom fine-tuning. Performance comparison between generic and specialized models. User interface built with Gradio.",
+      "detail": {
+        "context": "University project (SAE) carried out in a team of 7, aimed at creating an intelligent conversational chatbot based on the GPT-2 model. The project includes model exploration, data collection, specialized fine-tuning and comparative performance analysis.",
+        "role": "Participation in model fine-tuning, Gradio interface development and comparative analysis of results between generic and specialized models.",
+        "challenges": [
+          "Exploration and understanding of GPT-2 architecture with TensorFlow/Keras",
+          "Collection and preparation of specialized training data",
+          "Model fine-tuning with limited GPU resource management",
+          "Objective performance comparison between pre-trained and fine-tuned models",
+          "Development of an intuitive user interface with Gradio"
+        ],
+        "results": "Functional chatbot with Gradio web interface. Documented comparative analysis showing improved responses after fine-tuning on the specialized domain."
+      }
+    },
+    "dracorporation": {
+      "subtitle": "Collaborative Web Application",
+      "description": "Web application developed in a team of 5 (university project S3). PHP/Python architecture with PostgreSQL database. 199 commits reflecting structured team development.",
+      "detail": {
+        "context": "University project from semester 3 of the BUT Computer Science program, carried out in a team of 5 students. The goal was to develop a complete web application following collaborative development best practices.",
+        "role": "Backend development and PostgreSQL database integration. Active participation in development with regular contributions to the Git repository.",
+        "challenges": [
+          "Development of a multi-language web application (PHP backend, Python scripts, HTML/CSS frontend)",
+          "PostgreSQL database design and management with stored procedures (PL/pgSQL)",
+          "Team coordination with Git branch management and conflict resolution",
+          "Integration of Python scripts for server-side data processing"
+        ],
+        "results": "Functional web application delivered on time. 199 commits reflecting structured development and effective team collaboration."
+      }
+    },
+    "game": {
+      "subtitle": "Python Game",
+      "description": "Game developed in Python with modular architecture: game engine, data management and analyzer. Graphical interface with visual assets and progression system.",
+      "detail": {
+        "context": "Game development project in Python carried out as part of the BUT Computer Science program. The goal was to apply modular programming principles and object-oriented design.",
+        "role": "Design of the modular architecture and complete game development.",
+        "challenges": [
+          "Modular architecture separating game engine (main.py), business logic (cake.py), data management (tab_cakes.py) and analysis (analyseur.py)",
+          "Graphic asset management (illustrations, backgrounds, victory screen) and interface integration",
+          "Implementation of a progression system with multiple levels",
+          "Code structuring for maintainability and extensibility"
+        ],
+        "results": "Functional game with graphical interface, progression system and victory screen. Modular and easily extensible codebase."
+      }
+    },
+    "maths": {
+      "subtitle": "Mathematical Analysis",
+      "description": "Mathematical and computational analysis project built with Python and Jupyter Notebook. Demonstrates analytical and problem-solving skills.",
+      "detail": {
+        "context": "University project (SAE) combining applied mathematics and programming. The goal was to solve complex mathematical problems using computational tools in Python.",
+        "role": "Mathematical modeling, algorithm implementation and results analysis.",
+        "challenges": [
+          "Modeling mathematical problems into Python algorithms",
+          "Using Jupyter Notebook for interactive analysis and visualization",
+          "Numerical validation of results and mathematical interpretation",
+          "Clear documentation of the analytical approach"
+        ],
+        "results": "Complete mathematical analysis with results documented in an interactive Jupyter Notebook and exported HTML version."
+      }
+    },
+    "raspberry": {
+      "subtitle": "Raspberry Pi OS Configuration",
+      "description": "Configuration and administration of an operating system on Raspberry Pi. Complete documentation of installation process, network configuration and Linux service management.",
+      "detail": {
+        "context": "University project (SAE) aimed at mastering Linux system administration on Raspberry Pi embedded hardware. The goal was to configure a complete operational system from scratch.",
+        "role": "Installation, configuration and complete documentation of the Raspberry Pi system.",
+        "challenges": [
+          "Linux OS installation and configuration on Raspberry Pi",
+          "Network configuration (static IP, SSH, firewall)",
+          "Linux service management (systemd, cron, logging)",
+          "Writing comprehensive technical documentation of the process"
+        ],
+        "results": "Operational Raspberry Pi system with secure SSH access, configured services and detailed technical documentation (PDF) covering the entire process."
+      }
     },
     "status": {
       "inProgress": "In Progress",
       "completed": "Completed"
     },
-    "viewCode": "View code"
+    "viewCode": "View code",
+    "viewAll": "View all projects",
+    "learnMore": "Learn more",
+    "detailSections": {
+      "context": "Context",
+      "role": "My Role",
+      "challenges": "Technical Challenges",
+      "results": "Results",
+      "preview": "Preview",
+      "stack": "Tech Stack"
+    },
+    "notFound": "Project not found"
   },
   "skills": {
     "title": "Technical Skills",

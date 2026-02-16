@@ -61,21 +61,156 @@
     "truthtrace": {
       "subtitle": "Analyse de Débats par IA",
       "achievement": "TOP 6 Hackathon AgentsIRL 2025",
-      "description": "Application full-stack d'analyse automatisée de vidéos de débats par Intelligence Artificielle. Transcription automatique (Whisper), identification des locuteurs, classification d'arguments (Mistral), fact-checking automatisé et évaluation multi-dimensionnelle."
+      "description": "Application full-stack d'analyse automatisée de vidéos de débats par Intelligence Artificielle. Transcription automatique (Whisper), identification des locuteurs, classification d'arguments (Mistral), fact-checking automatisé et évaluation multi-dimensionnelle.",
+      "detail": {
+        "context": "Projet développé lors du Hackathon AgentsIRL 2025, une compétition d'IA réunissant des équipes autour de la création d'agents intelligents. L'objectif était de concevoir un outil capable d'analyser automatiquement des vidéos de débats pour extraire, classifier et vérifier les arguments avancés par chaque intervenant.",
+        "role": "Développement de la pipeline d'analyse : intégration de l'orchestration multi-agents avec LangGraph, mise en place du fact-checking automatisé et du scoring multi-dimensionnel des intervenants.",
+        "challenges": [
+          "Orchestration de multiples agents IA (transcription, diarisation, classification, fact-checking) en une pipeline cohérente via LangGraph",
+          "Identification et séparation des locuteurs dans des fichiers audio de débats avec Pyannote.audio",
+          "Classification des arguments en catégories (affirmations, preuves, réfutations) avec Mistral",
+          "Déploiement conteneurisé sur Google Cloud Run avec gestion des contraintes de mémoire et temps de traitement"
+        ],
+        "results": "Classement TOP 6 du hackathon. Application fonctionnelle avec timeline interactive colorée, fact-checking à 4 niveaux de vérification et scoring des intervenants sur 6 dimensions (exactitude factuelle, qualité des preuves, persuasion, etc.)."
+      }
     },
     "esp32": {
       "subtitle": "Station Météorologique IoT",
-      "description": "Système de collecte et analyse de données environnementales en temps réel. Architecture complète : ESP32 + capteur DHT11, firmware MicroPython, protocole MQTT, backend Flask + PostgreSQL, le tout conteneurisé avec Docker."
+      "description": "Système de collecte et analyse de données environnementales en temps réel. Architecture complète : ESP32 + capteur DHT11, firmware MicroPython, protocole MQTT, backend Flask + PostgreSQL, le tout conteneurisé avec Docker.",
+      "detail": {
+        "context": "Projet personnel visant à concevoir un système IoT complet de bout en bout : de la collecte de données par capteur jusqu'à la visualisation web, en passant par le protocole de communication et le stockage en base de données.",
+        "role": "Conception et développement de l'ensemble de l'architecture : firmware ESP32, broker MQTT, backend API et conteneurisation Docker.",
+        "challenges": [
+          "Programmation du firmware ESP32 en MicroPython avec gestion de la connexion WiFi et du protocole MQTT",
+          "Mise en place d'un broker MQTT pour la communication temps réel entre le capteur et le serveur",
+          "Conception de l'API Flask avec stockage PostgreSQL pour l'historique des mesures",
+          "Conteneurisation de l'ensemble des services (backend, base de données, broker) avec Docker Compose"
+        ],
+        "results": "Système fonctionnel collectant température et humidité en temps réel avec historique consultable via une API REST. Architecture reproductible grâce à Docker."
+      }
     },
     "security": {
       "subtitle": "Outils de Cybersécurité",
-      "description": "Scanner de ports multithreadé en Python pour identifier les services ouverts et détecter les versions. Script d'audit de robustesse des mots de passe avec attaque par dictionnaire."
+      "description": "Scanner de ports multithreadé en Python pour identifier les services ouverts et détecter les versions. Script d'audit de robustesse des mots de passe avec attaque par dictionnaire.",
+      "detail": {
+        "context": "Développement d'outils de cybersécurité dans le cadre du Master Cybersécurité à l'UPEC. L'objectif est de comprendre les techniques offensives pour mieux concevoir des défenses.",
+        "role": "Conception et développement complet des outils de scan et d'audit.",
+        "challenges": [
+          "Implémentation d'un scanner de ports multithreadé pour paralléliser les connexions TCP et accélérer la détection",
+          "Détection des versions de services via l'analyse des bannières de réponse",
+          "Script d'audit de mots de passe utilisant des dictionnaires et des règles de mutation (substitutions, ajout de chiffres)",
+          "Gestion des timeouts et de la fiabilité des résultats sur des réseaux variables"
+        ],
+        "results": "Scanner capable d'analyser les 65535 ports d'une cible en quelques minutes. Outil d'audit identifiant les mots de passe faibles selon les critères ANSSI."
+      }
+    },
+    "iaqa": {
+      "subtitle": "Fine-tuning QA sur SQuAD",
+      "description": "Fine-tuning de modèles de Question Answering sur le dataset SQuAD avec déploiement web. Pipeline complète : entraînement du modèle, évaluation des performances et interface web conteneurisée avec Docker.",
+      "detail": {
+        "context": "Projet universitaire (SAE) visant à explorer le fine-tuning de modèles de langage pour la tâche de Question Answering extractif. Le dataset SQuAD (Stanford Question Answering Dataset) sert de référence pour entraîner et évaluer les modèles.",
+        "role": "Développement de la pipeline d'entraînement, évaluation des modèles et mise en place du déploiement web conteneurisé.",
+        "challenges": [
+          "Fine-tuning de modèles Transformers sur le dataset SQuAD avec optimisation des hyperparamètres",
+          "Évaluation rigoureuse des performances (F1-score, Exact Match) sur les ensembles de test",
+          "Développement d'une interface web permettant de poser des questions sur un contexte donné",
+          "Conteneurisation avec Docker et mise en place d'un pipeline CI/CD via GitHub Actions"
+        ],
+        "results": "Modèle fine-tuné avec des performances compétitives sur SQuAD. Application web déployée permettant l'inférence en temps réel sur des textes arbitraires."
+      }
+    },
+    "gpt2": {
+      "subtitle": "Chatbot IA conversationnel",
+      "description": "Chatbot intelligent basé sur GPT-2 avec fine-tuning personnalisé. Comparaison des performances entre modèle générique et modèle spécialisé. Interface utilisateur développée avec Gradio.",
+      "detail": {
+        "context": "Projet universitaire (SAE) réalisé en équipe de 7, visant à créer un chatbot conversationnel intelligent basé sur le modèle GPT-2. Le projet inclut une phase d'exploration du modèle, une collecte de données, un fine-tuning spécialisé et une analyse comparative des performances.",
+        "role": "Participation au fine-tuning du modèle, développement de l'interface Gradio et analyse comparative des résultats entre modèle générique et spécialisé.",
+        "challenges": [
+          "Exploration et compréhension de l'architecture GPT-2 avec TensorFlow/Keras",
+          "Collecte et préparation de données d'entraînement spécialisées",
+          "Fine-tuning du modèle avec gestion des ressources GPU limitées",
+          "Comparaison objective des performances entre le modèle pré-entraîné et le modèle fine-tuné",
+          "Développement d'une interface utilisateur intuitive avec Gradio"
+        ],
+        "results": "Chatbot fonctionnel avec interface web Gradio. Analyse comparative documentée montrant l'amélioration des réponses après fine-tuning sur le domaine spécialisé."
+      }
+    },
+    "dracorporation": {
+      "subtitle": "Application Web Collaborative",
+      "description": "Application web développée en équipe de 5 (projet universitaire S3). Architecture PHP/Python avec base de données PostgreSQL. 199 commits témoignant d'un développement structuré en équipe.",
+      "detail": {
+        "context": "Projet universitaire du semestre 3 du BUT Informatique, réalisé en équipe de 5 étudiants. L'objectif était de développer une application web complète en suivant les bonnes pratiques de développement collaboratif.",
+        "role": "Développement backend et intégration de la base de données PostgreSQL. Participation active au développement avec contribution régulière au dépôt Git.",
+        "challenges": [
+          "Développement d'une application web multi-langages (PHP backend, Python scripts, HTML/CSS frontend)",
+          "Conception et gestion de la base de données PostgreSQL avec procédures stockées (PL/pgSQL)",
+          "Coordination en équipe de 5 avec gestion de branches Git et résolution de conflits",
+          "Intégration de scripts Python pour le traitement de données côté serveur"
+        ],
+        "results": "Application web fonctionnelle livrée dans les délais. 199 commits reflétant un développement structuré et une collaboration efficace au sein de l'équipe."
+      }
+    },
+    "game": {
+      "subtitle": "Jeu en Python",
+      "description": "Jeu développé en Python avec architecture modulaire : moteur de jeu, gestion des données et analyseur. Interface graphique avec assets visuels et système de progression.",
+      "detail": {
+        "context": "Projet de développement d'un jeu en Python réalisé dans le cadre du BUT Informatique. L'objectif était d'appliquer les principes de programmation modulaire et de conception orientée objet.",
+        "role": "Conception de l'architecture modulaire et développement complet du jeu.",
+        "challenges": [
+          "Architecture modulaire séparant le moteur de jeu (main.py), la logique métier (cake.py), la gestion des données (tab_cakes.py) et l'analyse (analyseur.py)",
+          "Gestion des assets graphiques (illustrations, fond, écran de victoire) et intégration dans l'interface",
+          "Implémentation d'un système de progression avec plusieurs niveaux",
+          "Structuration du code pour faciliter la maintenance et l'évolution"
+        ],
+        "results": "Jeu fonctionnel avec interface graphique, système de progression et écran de victoire. Code modulaire facilement extensible."
+      }
+    },
+    "maths": {
+      "subtitle": "Analyse Mathématique",
+      "description": "Projet d'analyse mathématique et computationnelle réalisé avec Python et Jupyter Notebook. Démonstration de compétences analytiques et de résolution de problèmes.",
+      "detail": {
+        "context": "Projet universitaire (SAE) combinant mathématiques appliquées et programmation. L'objectif était de résoudre des problèmes mathématiques complexes à l'aide d'outils computationnels en Python.",
+        "role": "Modélisation mathématique, implémentation des algorithmes et analyse des résultats.",
+        "challenges": [
+          "Modélisation de problèmes mathématiques en algorithmes Python",
+          "Utilisation de Jupyter Notebook pour l'analyse interactive et la visualisation",
+          "Validation numérique des résultats et interprétation mathématique",
+          "Documentation claire de la démarche analytique"
+        ],
+        "results": "Analyse mathématique complète avec résultats documentés dans un Jupyter Notebook interactif et une version HTML exportée."
+      }
+    },
+    "raspberry": {
+      "subtitle": "Configuration Système Raspberry Pi",
+      "description": "Configuration et administration d'un système d'exploitation sur Raspberry Pi. Documentation complète du processus d'installation, de configuration réseau et de gestion des services Linux.",
+      "detail": {
+        "context": "Projet universitaire (SAE) visant à maîtriser l'administration système Linux sur du matériel embarqué Raspberry Pi. L'objectif était de configurer un système opérationnel complet depuis zéro.",
+        "role": "Installation, configuration et documentation complète du système Raspberry Pi.",
+        "challenges": [
+          "Installation et configuration d'un OS Linux sur Raspberry Pi",
+          "Configuration réseau (IP statique, SSH, pare-feu)",
+          "Gestion des services Linux (systemd, cron, journalisation)",
+          "Rédaction d'une documentation technique complète du processus"
+        ],
+        "results": "Système Raspberry Pi opérationnel avec accès SSH sécurisé, services configurés et documentation technique détaillée (PDF) couvrant l'ensemble du processus."
+      }
     },
     "status": {
       "inProgress": "En cours",
       "completed": "Terminé"
     },
-    "viewCode": "Voir le code"
+    "viewCode": "Voir le code",
+    "viewAll": "Voir tous les projets",
+    "learnMore": "En savoir plus",
+    "detailSections": {
+      "context": "Contexte",
+      "role": "Mon rôle",
+      "challenges": "Défis techniques",
+      "results": "Résultats",
+      "preview": "Aperçu",
+      "stack": "Stack technique"
+    },
+    "notFound": "Projet non trouvé"
   },
   "skills": {
     "title": "Compétences Techniques",
