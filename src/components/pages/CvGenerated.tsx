@@ -94,11 +94,15 @@ export function CvGenerated() {
           </h2>
           {education.map((edu) => {
             const key = edu.id === 'upec-master' ? 'upec' : 'but';
+            const achievement = t(`education.${key}.achievement`, { defaultValue: '' });
             return (
               <div key={edu.id} className="mb-2">
                 <div className="flex justify-between items-baseline">
                   <h3 className="font-bold text-sm text-gray-900">
                     {t(`education.${key}.degree`)} — {t(`education.${key}.specialization`)}
+                    {achievement && (
+                      <span className="ml-2 text-primary-600 font-medium text-xs">({achievement})</span>
+                    )}
                   </h3>
                   <span className="text-xs text-gray-500 shrink-0 ml-2">
                     {edu.startYear} — {edu.endYear}
@@ -176,7 +180,7 @@ export function CvGenerated() {
         {/* Languages */}
         <section>
           <h2 className="text-lg font-bold text-primary-700 border-b-2 border-primary-200 pb-1 mb-3">
-            {i18n.language === 'fr' ? 'Langues' : 'Languages'}
+            {{ fr: 'Langues', en: 'Languages', zh: '语言能力' }[i18n.language] || 'Languages'}
           </h2>
           <p className="text-sm text-gray-700">{t('about.languages')}</p>
         </section>
