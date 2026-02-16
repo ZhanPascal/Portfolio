@@ -1,0 +1,246 @@
+{
+  "nav": {
+    "about": "关于我",
+    "experience": "工作经历",
+    "education": "教育背景",
+    "projects": "项目",
+    "skills": "技能",
+    "contact": "联系方式",
+    "cv": "简历"
+  },
+  "hero": {
+    "greeting": "你好，我是",
+    "title": "DevOps 开发工程师 & 网络安全学生",
+    "tagline": "正在寻找：M1实习（2026年4月-9月）+ M2学徒制",
+    "cta": "联系我",
+    "viewCv": "查看简历"
+  },
+  "about": {
+    "title": "关于我",
+    "p1": "UPEC 计算机科学硕士一年级学生，主攻系统设计与网络安全方向。我将全栈开发和DevOps的丰富专业经验与对人工智能、数据科学和网络安全的浓厚兴趣相结合。",
+    "p2": "在CGI France进行了2年以上的学徒制期间，我开发了一个Java/Vue.js基础设施管理门户，自动化管理了2000多台虚拟机，并构建了一个自助部署应用，将部署时间从2周缩短至2小时（-98%）。",
+    "p3": "凭借TruthTrace项目获得AgentsIRL 2025黑客松TOP 6名次。该项目是一个AI自动化辩论分析应用，结合了多智能体编排（LangGraph）、音频转录（OpenAI Whisper）和语义分析（Mistral），部署在Google Cloud Run上。",
+    "p4": "目前正在开发一个IoT项目（ESP32气象站 + MicroPython + MQTT），并在硕士课程中深入学习攻防网络安全知识。",
+    "bilingual": "法语-中文双母语（母语），这是国际团队沟通和技术翻译的重要优势。",
+    "languages": "语言：法语（母语）、中文普通话（母语）、英语（B2）、日语（入门）、韩语（入门）",
+    "interests": "欢迎交流AI/数据科学、DevOps、网络安全或IoT领域的机会。"
+  },
+  "experience": {
+    "title": "工作经历",
+    "cgi": {
+      "position": "Java / DevOps 开发工程师",
+      "type": "学徒制（2年）",
+      "description": "全栈开发内部基础设施管理门户，自动化项目环境的安全部署。技术栈：Java、Vue.js、PostgreSQL、Docker、Jenkins。",
+      "achievements": [
+        "按安全标准自动化虚拟机配置修改（内存、CPU、磁盘）— 异步管理Hyper-V/VMware任务",
+        "开发自助部署应用 → 将部署时间从2周缩短至2小时（-98%）",
+        "将Web应用防火墙（WAF）完整集成到门户中并调整相关定价",
+        "运维保障：监控自动化任务，实施预防措施",
+        "数据中心备份管理：协调跨站点备份流程",
+        "参与虚拟机迁移至更高性能基础设施",
+        "实施Gitflow方法论：分支管理、冲突解决和持续集成"
+      ]
+    }
+  },
+  "education": {
+    "title": "教育背景",
+    "upec": {
+      "degree": "计算机科学硕士一年级",
+      "specialization": "系统设计与网络安全",
+      "description": "网络安全和计算机系统设计专业培训。交替制学习：一周学校 / 一周企业。",
+      "current": "进行中"
+    },
+    "but": {
+      "degree": "计算机技术学士（BUT）",
+      "specialization": "应用开发",
+      "description": "应用开发方向：软件应用的设计、开发和验证。全栈开发、数据库、敏捷方法论。"
+    }
+  },
+  "projects": {
+    "title": "项目",
+    "truthtrace": {
+      "subtitle": "AI辩论分析",
+      "achievement": "TOP 6 AgentsIRL 2025黑客松",
+      "description": "全栈AI自动化辩论视频分析应用。自动转录（Whisper）、说话人识别、论点分类（Mistral）、自动事实核查和多维度评估。",
+      "detail": {
+        "context": "该项目在AgentsIRL 2025黑客松期间开发，这是一场汇集各团队创建智能代理的AI竞赛。目标是设计一个能够自动分析辩论视频、提取、分类和验证每位发言者论点的工具。",
+        "role": "分析流水线开发：集成LangGraph多智能体编排，实现自动事实核查和多维度发言者评分。",
+        "challenges": [
+          "通过LangGraph将多个AI智能体（转录、说话人分离、分类、事实核查）编排成连贯的流水线",
+          "使用Pyannote.audio在辩论音频文件中进行说话人识别和分离",
+          "使用Mistral将论点分类为不同类别（主张、证据、反驳）",
+          "在Google Cloud Run上进行容器化部署，管理内存和处理时间限制"
+        ],
+        "results": "黑客松TOP 6名次。功能完整的应用，具有交互式彩色时间线、4级事实核查验证和6个维度的发言者评分（事实准确性、证据质量、说服力等）。"
+      }
+    },
+    "esp32": {
+      "subtitle": "IoT气象站",
+      "description": "实时环境数据采集与分析系统。完整架构：ESP32 + DHT11传感器、MicroPython固件、MQTT协议、Flask + PostgreSQL后端，全部通过Docker容器化。",
+      "detail": {
+        "context": "个人项目，旨在设计一个完整的端到端IoT系统：从传感器数据采集到网页可视化，包括通信协议和数据库存储。",
+        "role": "设计和开发整个架构：ESP32固件、MQTT代理、后端API和Docker容器化。",
+        "challenges": [
+          "使用MicroPython编程ESP32固件，管理WiFi连接和MQTT协议",
+          "搭建MQTT代理实现传感器与服务器之间的实时通信",
+          "设计Flask API并使用PostgreSQL存储测量历史数据",
+          "使用Docker Compose容器化所有服务（后端、数据库、代理）"
+        ],
+        "results": "功能完整的系统，实时采集温度和湿度数据，历史记录可通过REST API查询。借助Docker实现可复现的架构。"
+      }
+    },
+    "security": {
+      "subtitle": "网络安全工具",
+      "description": "多线程Python端口扫描器，用于识别开放服务和检测版本。密码强度审计脚本，支持字典攻击。",
+      "detail": {
+        "context": "在UPEC网络安全硕士课程中开发的网络安全工具。目标是理解攻击技术以更好地设计防御方案。",
+        "role": "扫描和审计工具的完整设计和开发。",
+        "challenges": [
+          "实现多线程端口扫描器，并行化TCP连接以加速检测",
+          "通过响应横幅分析检测服务版本",
+          "使用字典和变异规则（替换、数字追加）的密码审计脚本",
+          "管理超时和可变网络上结果的可靠性"
+        ],
+        "results": "扫描器能在几分钟内分析目标的全部65535个端口。审计工具可根据ANSSI标准识别弱密码。"
+      }
+    },
+    "iaqa": {
+      "subtitle": "SQuAD问答微调",
+      "description": "在SQuAD数据集上微调问答模型并进行Web部署。完整流水线：模型训练、性能评估和Docker容器化Web界面。",
+      "detail": {
+        "context": "大学项目（SAE），旨在探索语言模型在抽取式问答任务上的微调。SQuAD（斯坦福问答数据集）作为训练和评估模型的基准。",
+        "role": "开发训练流水线、模型评估和容器化Web部署。",
+        "challenges": [
+          "在SQuAD数据集上微调Transformer模型并优化超参数",
+          "在测试集上进行严格的性能评估（F1分数、精确匹配）",
+          "开发Web界面，支持在给定上下文中提问",
+          "使用Docker容器化并通过GitHub Actions搭建CI/CD流水线"
+        ],
+        "results": "微调模型在SQuAD上达到有竞争力的性能。部署的Web应用支持对任意文本进行实时推理。"
+      }
+    },
+    "gpt2": {
+      "subtitle": "AI对话机器人",
+      "description": "基于GPT-2的智能聊天机器人，带有自定义微调。通用模型与专业模型的性能对比。使用Gradio构建用户界面。",
+      "detail": {
+        "context": "大学项目（SAE），7人团队合作，旨在基于GPT-2模型创建智能对话机器人。项目包括模型探索、数据收集、专业微调和性能对比分析。",
+        "role": "参与模型微调、Gradio界面开发以及通用模型与专业模型的对比分析。",
+        "challenges": [
+          "使用TensorFlow/Keras探索和理解GPT-2架构",
+          "收集和准备专业训练数据",
+          "在有限GPU资源下进行模型微调",
+          "预训练模型与微调模型的客观性能对比",
+          "使用Gradio开发直观的用户界面"
+        ],
+        "results": "具有Gradio Web界面的功能完整的聊天机器人。文档化的对比分析表明，在专业领域微调后回答质量得到提升。"
+      }
+    },
+    "dracorporation": {
+      "subtitle": "协作Web应用",
+      "description": "5人团队开发的Web应用（大学S3项目）。PHP/Python架构配合PostgreSQL数据库。199次提交，体现了结构化的团队开发。",
+      "detail": {
+        "context": "BUT计算机科学第三学期大学项目，5名学生团队合作。目标是遵循协作开发最佳实践开发完整的Web应用。",
+        "role": "后端开发和PostgreSQL数据库集成。积极参与开发并定期向Git仓库提交代码。",
+        "challenges": [
+          "开发多语言Web应用（PHP后端、Python脚本、HTML/CSS前端）",
+          "PostgreSQL数据库设计和管理，包含存储过程（PL/pgSQL）",
+          "5人团队协作，包括Git分支管理和冲突解决",
+          "集成Python脚本进行服务器端数据处理"
+        ],
+        "results": "按时交付的功能完整的Web应用。199次提交体现了结构化开发和团队的高效协作。"
+      }
+    },
+    "game": {
+      "subtitle": "Python游戏",
+      "description": "使用Python开发的游戏，采用模块化架构：游戏引擎、数据管理和分析器。图形界面配合视觉素材和进度系统。",
+      "detail": {
+        "context": "在BUT计算机科学课程中完成的Python游戏开发项目。目标是应用模块化编程原则和面向对象设计。",
+        "role": "模块化架构设计和完整游戏开发。",
+        "challenges": [
+          "模块化架构，分离游戏引擎（main.py）、业务逻辑（cake.py）、数据管理（tab_cakes.py）和分析（analyseur.py）",
+          "图形素材管理（插图、背景、胜利画面）和界面集成",
+          "实现多关卡进度系统",
+          "代码结构化以便于维护和扩展"
+        ],
+        "results": "具有图形界面、进度系统和胜利画面的功能完整游戏。模块化且易于扩展的代码库。"
+      }
+    },
+    "maths": {
+      "subtitle": "数学分析",
+      "description": "使用Python和Jupyter Notebook完成的数学与计算分析项目。展示分析能力和问题解决技能。",
+      "detail": {
+        "context": "大学项目（SAE），结合应用数学和编程。目标是使用Python计算工具解决复杂的数学问题。",
+        "role": "数学建模、算法实现和结果分析。",
+        "challenges": [
+          "将数学问题建模为Python算法",
+          "使用Jupyter Notebook进行交互式分析和可视化",
+          "数值验证结果和数学解释",
+          "清晰记录分析方法"
+        ],
+        "results": "完整的数学分析，结果记录在交互式Jupyter Notebook和导出的HTML版本中。"
+      }
+    },
+    "raspberry": {
+      "subtitle": "树莓派系统配置",
+      "description": "在树莓派上配置和管理操作系统。完整记录安装过程、网络配置和Linux服务管理。",
+      "detail": {
+        "context": "大学项目（SAE），旨在掌握在树莓派嵌入式硬件上的Linux系统管理。目标是从零开始配置完整的操作系统。",
+        "role": "树莓派系统的安装、配置和完整文档编写。",
+        "challenges": [
+          "在树莓派上安装和配置Linux操作系统",
+          "网络配置（静态IP、SSH、防火墙）",
+          "Linux服务管理（systemd、cron、日志记录）",
+          "编写完整的技术文档"
+        ],
+        "results": "功能完整的树莓派系统，具有安全的SSH访问、配置好的服务和详细的技术文档（PDF），涵盖整个过程。"
+      }
+    },
+    "status": {
+      "inProgress": "进行中",
+      "completed": "已完成"
+    },
+    "viewCode": "查看代码",
+    "viewAll": "查看全部项目",
+    "learnMore": "了解更多",
+    "detailSections": {
+      "context": "项目背景",
+      "role": "我的角色",
+      "challenges": "技术挑战",
+      "results": "成果",
+      "preview": "预览",
+      "stack": "技术栈"
+    },
+    "notFound": "项目未找到"
+  },
+  "skills": {
+    "title": "技术技能",
+    "categories": {
+      "languages": "编程语言",
+      "ai-data": "人工智能与数据科学",
+      "devops": "DevOps与云计算",
+      "databases": "数据库",
+      "security": "网络安全",
+      "iot": "物联网与嵌入式系统",
+      "tools": "工具与方法论"
+    }
+  },
+  "contact": {
+    "title": "联系我",
+    "subtitle": "我正在寻找M1实习（2026年4月-9月）和M2学徒制。欢迎与我联系！",
+    "email": "邮箱",
+    "availability": "可用时间",
+    "internship": "M1实习：2026年4月 - 9月",
+    "alternance": "M2学徒制：2026年9月起",
+    "sendEmail": "发送邮件"
+  },
+  "cv": {
+    "title": "我的简历",
+    "download": "下载简历",
+    "print": "打印简历",
+    "back": "返回作品集",
+    "placeholder": "简历即将上线。请稍后再来查看或直接联系我。"
+  },
+  "footer": {
+    "rights": "版权所有"
+  }
+}

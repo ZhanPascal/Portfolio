@@ -15,9 +15,11 @@ export function Header() {
   const location = useLocation();
   const isHome = location.pathname === '/';
 
-  const toggleLang = () => {
-    i18n.changeLanguage(i18n.language === 'fr' ? 'en' : 'fr');
-  };
+  const langs = [
+    { code: 'fr', label: 'FR' },
+    { code: 'en', label: 'EN' },
+    { code: 'zh', label: '中' },
+  ];
 
   const scrollTo = (id: string) => {
     const el = document.getElementById(id);
@@ -63,12 +65,21 @@ export function Header() {
             >
               {t('nav.cv')}
             </Link>
-            <button
-              onClick={toggleLang}
-              className="text-sm font-medium px-3 py-1.5 rounded-xl bg-soft-100 dark:bg-soft-700 text-soft-600 dark:text-soft-300 hover:bg-soft-200 dark:hover:bg-soft-600 transition-colors"
-            >
-              {i18n.language === 'fr' ? 'EN' : 'FR'}
-            </button>
+            <div className="flex rounded-xl overflow-hidden border border-soft-200 dark:border-soft-600">
+              {langs.map(({ code, label }) => (
+                <button
+                  key={code}
+                  onClick={() => i18n.changeLanguage(code)}
+                  className={`text-xs font-medium px-2.5 py-1.5 transition-colors ${
+                    i18n.language === code
+                      ? 'bg-primary-500 text-white'
+                      : 'bg-soft-100 dark:bg-soft-700 text-soft-500 dark:text-soft-400 hover:bg-soft-200 dark:hover:bg-soft-600'
+                  }`}
+                >
+                  {label}
+                </button>
+              ))}
+            </div>
             <button
               onClick={toggleTheme}
               className="p-2 rounded-xl bg-soft-100 dark:bg-soft-700 hover:bg-soft-200 dark:hover:bg-soft-600 transition-colors"
@@ -80,9 +91,21 @@ export function Header() {
 
           {/* Mobile controls */}
           <div className="md:hidden flex items-center gap-3">
-            <button onClick={toggleLang} className="text-sm px-3 py-1.5 rounded-xl bg-soft-100 dark:bg-soft-700">
-              {i18n.language === 'fr' ? 'EN' : 'FR'}
-            </button>
+            <div className="flex rounded-xl overflow-hidden border border-soft-200 dark:border-soft-600">
+              {langs.map(({ code, label }) => (
+                <button
+                  key={code}
+                  onClick={() => i18n.changeLanguage(code)}
+                  className={`text-xs font-medium px-2 py-1.5 transition-colors ${
+                    i18n.language === code
+                      ? 'bg-primary-500 text-white'
+                      : 'bg-soft-100 dark:bg-soft-700 text-soft-500 dark:text-soft-400'
+                  }`}
+                >
+                  {label}
+                </button>
+              ))}
+            </div>
             <button onClick={toggleTheme} className="p-2 rounded-xl bg-soft-100 dark:bg-soft-700" aria-label="Toggle theme">
               {theme === 'light' ? <FiMoon className="w-4 h-4" /> : <FiSun className="w-4 h-4 text-accent-gold" />}
             </button>
