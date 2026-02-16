@@ -12,6 +12,7 @@ export function Education() {
       <div className="space-y-6">
         {education.map((edu) => {
           const key = edu.id === 'upec-master' ? 'upec' : 'but';
+          const achievement = t(`education.${key}.achievement`, { defaultValue: '' });
           return (
             <Card key={edu.id}>
               <div className="flex gap-4">
@@ -26,6 +27,11 @@ export function Education() {
                     {edu.current && (
                       <span className="px-2 py-0.5 bg-accent-sage/30 text-emerald-700 dark:text-emerald-300 rounded-lg text-xs font-medium">
                         {t(`education.${key}.current`)}
+                      </span>
+                    )}
+                    {achievement && (
+                      <span className="px-2 py-0.5 bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 rounded-lg text-xs font-medium">
+                        {achievement}
                       </span>
                     )}
                   </div>
