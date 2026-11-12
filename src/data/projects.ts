@@ -14,7 +14,7 @@ export interface Project {
 
 export function getProjectKey(id: string): string {
   const mapping: Record<string, string> = {
-    'esp32-weather': 'esp32',
+    'ratp-iot': 'ratp',
     'security-tools': 'security',
     'ia-qa': 'iaqa',
     'gpt2-chatbot': 'gpt2',
@@ -26,6 +26,36 @@ export function getProjectKey(id: string): string {
 }
 
 export const projects: Project[] = [
+  {
+    id: 'cstracker',
+    name: 'CSTracker',
+    date: '2026',
+    technologies: ['Node.js', 'Express 5', 'TypeScript', 'React 18', 'Prisma', 'PostgreSQL', 'Docker', 'API Riot Games'],
+    status: 'in-progress',
+    featured: true,
+    links: {
+      github: 'https://github.com/ZhanPascal/CSTracker',
+    },
+  },
+  {
+    id: 'bambootrace',
+    name: 'BambooTrace',
+    date: '2026',
+    technologies: ['Kotlin', 'Jetpack Compose', 'MVVM', 'Room', 'Hilt', 'Coroutines'],
+    status: 'in-progress',
+    featured: true,
+    links: {
+      github: 'https://github.com/ZhanPascal/BambooTrace',
+    },
+  },
+  {
+    id: 'ratp-iot',
+    name: 'Affichage RATP IoT',
+    date: '2026',
+    technologies: ['C++', 'ESP32', 'Arduino', 'MQTT', 'Node-RED', 'InfluxDB', 'Grafana', 'Docker', 'API PRIM (SIRI)'],
+    status: 'completed',
+    featured: true,
+  },
   {
     id: 'truthtrace',
     name: 'TruthTrace',
@@ -57,17 +87,6 @@ export const projects: Project[] = [
     featured: true,
     links: {
       github: 'https://github.com/ZhanPascal/SAE-GPT2',
-    },
-  },
-  {
-    id: 'esp32-weather',
-    name: 'ESP32 Weather Station',
-    date: '2026',
-    technologies: ['ESP32', 'MicroPython', 'MQTT', 'Flask', 'PostgreSQL', 'Docker'],
-    status: 'in-progress',
-    featured: true,
-    links: {
-      github: 'https://github.com/ZhanPascal/ESP32-Weather-Station',
     },
   },
   {

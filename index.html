@@ -1,14 +1,24 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
+    <script>
+      // Restore the URL after a GitHub Pages 404 redirect (see public/404.html)
+      (function () {
+        var p = new URLSearchParams(window.location.search).get('p');
+        if (p && p.charAt(0) === '/' && p.charAt(1) !== '/') {
+          window.history.replaceState(null, '', p);
+        }
+      })();
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Pascal ZHAN - DevOps & Cybersecurity Student. Portfolio showcasing 2+ years of DevOps experience and AI/Data Science projects." />
-    <meta name="keywords" content="DevOps, Cybersecurity, Portfolio, Pascal ZHAN, Developer, France, AI, Data Science" />
+    <meta name="description" content="Pascal ZHAN – Ingénieur Logiciel &amp; Cybersécurité. Étudiant en M2 Informatique (UPEC), expériences chez Siemens Mobility (logiciel embarqué, Ada, CBTC) et CGI France (DevOps). Projets full-stack, mobile, IoT et IA." />
+    <meta name="keywords" content="Pascal ZHAN, Portfolio, Ingénieur Logiciel, Cybersécurité, Systèmes embarqués, DevOps, IA, Alternance, Stage, Software Engineer, Cybersecurity" />
     <meta name="author" content="Pascal ZHAN" />
     <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://pascalzhan.com/" />
     <meta property="og:title" content="Pascal ZHAN - Portfolio" />
-    <meta property="og:description" content="DevOps Engineer & Cybersecurity Student" />
+    <meta property="og:description" content="Ingénieur Logiciel &amp; Cybersécurité – M2 Informatique, Siemens Mobility, CGI France" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">

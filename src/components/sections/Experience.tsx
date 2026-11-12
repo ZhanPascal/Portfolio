@@ -11,7 +11,8 @@ export function Experience() {
     <Section id="experience" title={t('experience.title')} className="bg-soft-50/50 dark:bg-soft-800/30">
       <div className="space-y-6">
         {experiences.map((exp) => {
-          const achievements = t(`experience.${exp.id === 'cgi-devops' ? 'cgi' : exp.id}.achievements`, { returnObjects: true }) as string[];
+          const key = exp.id;
+          const achievements = t(`experience.${key}.achievements`, { returnObjects: true }) as string[];
           return (
             <Card key={exp.id}>
               <div className="flex gap-4">
@@ -21,10 +22,10 @@ export function Experience() {
                 <div className="flex-1">
                   <div className="flex flex-wrap items-center gap-2 mb-1">
                     <h3 className="text-lg font-bold text-soft-900 dark:text-soft-50">
-                      {t(`experience.${exp.id === 'cgi-devops' ? 'cgi' : exp.id}.position`)}
+                      {t(`experience.${key}.position`)}
                     </h3>
                     <span className="px-2 py-0.5 bg-accent-gold/20 text-primary-700 dark:text-primary-300 rounded-lg text-xs font-medium">
-                      {t(`experience.${exp.id === 'cgi-devops' ? 'cgi' : exp.id}.type`)}
+                      {t(`experience.${key}.type`)}
                     </span>
                   </div>
                   <p className="text-base text-soft-700 dark:text-soft-300 font-medium">
@@ -34,7 +35,7 @@ export function Experience() {
                     {exp.location} &middot; {exp.startDate} - {exp.endDate}
                   </p>
                   <p className="text-sm text-soft-600 dark:text-soft-400 mb-3">
-                    {t(`experience.${exp.id === 'cgi-devops' ? 'cgi' : exp.id}.description`)}
+                    {t(`experience.${key}.description`)}
                   </p>
                   <ul className="space-y-1.5">
                     {Array.isArray(achievements) && achievements.map((a, i) => (
@@ -47,7 +48,7 @@ export function Experience() {
                   <div className="flex flex-wrap gap-2 mt-4">
                     {exp.technologies.map((tech) => (
                       <span key={tech} className="px-2 py-1 bg-soft-100 dark:bg-soft-700 text-soft-600 dark:text-soft-300 rounded-lg text-xs">
-                        {tech}
+                        {t(`labels.${tech}`, { defaultValue: tech })}
                       </span>
                     ))}
                   </div>

@@ -16,15 +16,14 @@ Portfolio personnel trilingue (FR/EN/中文) avec un design 温暖 (chaleureux) 
 - Dark mode avec persistance localStorage
 - Navigation smooth scroll avec section active
 - Responsive (mobile, tablette, desktop)
-- 9 projets avec pages de détail individuelles (`/projects/:id`)
+- 11 projets avec pages de détail individuelles (`/projects/:id`)
 - Page listing de tous les projets (`/projects`)
 - Cards cliquables vers les détails (contexte, rôle, défis techniques, résultats, stack)
 - Intégration iframe pour les projets avec contenu HTML (ex: Jupyter)
 - Page CV dédiée (`/cv`) :
-  - Affiche le PDF si disponible (`public/cv/cv-fr.pdf` / `cv-en.pdf`)
-  - Génère automatiquement un CV HTML depuis les données du site sinon
-  - Le CV suit la langue active du site
-  - Bouton imprimer / télécharger
+  - Affiche le CV PDF de la langue active du site (FR / EN / ZH)
+  - Onglets « Alternance » / « Stage » pour choisir la version
+  - Bouton de téléchargement
 
 ## Développement
 
@@ -57,20 +56,21 @@ Pré-requis :
 ```
 src/
 ├── components/
-│   ├── common/        Button, Card, Section, SkillBadge
-│   ├── layout/        Header, Footer
-│   ├── pages/         CvPage, CvGenerated, ProjectsPage, ProjectDetailPage
+│   ├── common/        Button, Card, ProjectCard, Section, SkillBadge
+│   ├── layout/        Header, Footer, LanguageSwitcher
+│   ├── pages/         CvPage, ProjectsPage, ProjectDetailPage
 │   └── sections/      Hero, About, Experience, Education, Projects, Skills, Contact
 ├── data/              Données structurées (personal, experience, education, projects, skills)
 ├── hooks/             useTheme, useScrollSpy
+├── locales/           Traductions FR / EN / ZH
 ├── styles/            Tailwind + palette warm
 └── utils/             Configuration i18n
 public/
-├── cv/                CV PDF (à fournir : cv-fr.pdf, cv-en.pdf)
-└── locales/           Traductions FR / EN / ZH
+├── cv/                CV PDF : cv-<langue>.pdf (alternance) et cv-<langue>-stage.pdf (stage)
+└── 404.html           Redirection GitHub Pages pour les liens directs (/cv, /projects/...)
 ```
 
 ## Modifier le contenu
 
-Les données sont centralisées dans `src/data/` et les traductions dans `public/locales/`.
+Les données sont centralisées dans `src/data/` et les traductions dans `src/locales/`.
 Aucune modification de composant n'est nécessaire pour mettre à jour le contenu.

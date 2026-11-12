@@ -24,8 +24,8 @@ export function Contact() {
               <p className="font-semibold text-soft-900 dark:text-soft-50 text-sm mb-1">
                 {t('contact.availability')}
               </p>
-              <p className="text-sm text-soft-600 dark:text-soft-300">{t('contact.internship')}</p>
               <p className="text-sm text-soft-600 dark:text-soft-300">{t('contact.alternance')}</p>
+              <p className="text-sm text-soft-600 dark:text-soft-300">{t('contact.internship')}</p>
             </div>
           </div>
         </Card>

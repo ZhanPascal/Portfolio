@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <title>Pascal ZHAN</title>
     <script>
-      // SPA redirect for GitHub Pages
-      var path = window.location.pathname;
-      window.location.replace('/' + '?p=' + encodeURIComponent(path));
+      // SPA redirect for GitHub Pages: index.html restores the original URL from ?p=
+      var l = window.location;
+      l.replace('/?p=' + encodeURIComponent(l.pathname + l.search + l.hash));
     </script>
   </head>
   <body></body>

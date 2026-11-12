@@ -1,40 +1,25 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
-import { FiArrowLeft, FiDownload, FiPrinter } from 'react-icons/fi';
+import { FiArrowLeft, FiDownload } from 'react-icons/fi';
 import { Button } from '../common/Button';
-import { CvGenerated } from './CvGenerated';
+
+type CvVariant = 'alternance' | 'stage';
+
+const CV_LANGS = ['fr', 'en', 'zh'];
 
 export function CvPage() {
   const { t, i18n } = useTranslation();
-  const lang = i18n.language === 'fr' ? 'fr' : 'en';
-  const cvPath = `${import.meta.env.BASE_URL}cv/cv-${lang}.pdf`;
-  const [pdfAvailable, setPdfAvailable] = useState<boolean | null>(null);
-
-  useEffect(() => {
-    fetch(cvPath, { method: 'HEAD' })
-      .then((res) => setPdfAvailable(res.ok && (res.headers.get('content-type')?.includes('pdf') ?? false)))
-      .catch(() => setPdfAvailable(false));
-  }, [cvPath]);
-
-  const handlePrint = useCallback(() => {
-    window.print();
-  }, []);
-
-  // Loading state
-  if (pdfAvailable === null) {
-    return (
-      <div className="min-h-screen bg-soft-50 dark:bg-soft-900 pt-20 flex items-center justify-center">
-        <div className="animate-pulse text-soft-400">...</div>
-      </div>
-    );
-  }
+  const lang = CV_LANGS.includes(i18n.language) ? i18n.language : 'en';
+  const [variant, setVariant] = useState<CvVariant>('alternance');
+  // public/cv/cv-<lang>.pdf (alternance) and cv-<lang>-stage.pdf (stage)
+  const cvPath = `${import.meta.env.BASE_URL}cv/cv-${lang}${variant === 'stage' ? '-stage' : ''}.pdf`;
 
   return (
     <div className="min-h-screen bg-soft-50 dark:bg-soft-900 pt-20">
-      <div className={`container mx-auto px-6 py-8 ${pdfAvailable ? 'max-w-5xl' : 'max-w-[230mm]'}`}>
+      <div className="container mx-auto px-6 py-8 max-w-5xl">
         {/* Top bar */}
-        <div className="flex flex-wrap items-center justify-between gap-4 mb-6 no-print">
+        <div className="flex flex-wrap items-center justify-between gap-4 mb-6">
           <Link
             to="/"
             className="inline-flex items-center gap-2 text-sm text-soft-500 hover:text-primary-500 transition-colors"
@@ -45,33 +30,42 @@ export function CvPage() {
           <h1 className="text-2xl font-bold text-soft-900 dark:text-soft-50">
             {t('cv.title')}
           </h1>
-          <div className="flex gap-3">
-            {pdfAvailable ? (
-              <Button href={cvPath}>
-                <FiDownload size={16} />
-                {t('cv.download')}
-              </Button>
-            ) : (
-              <Button onClick={handlePrint}>
-                <FiPrinter size={16} />
-                {t('cv.print')}
-              </Button>
-            )}
+          <Button href={cvPath}>
+            <FiDownload size={16} />
+            {t('cv.download')}
+          </Button>
+        </div>
+
+        {/* Variant switch */}
+        <div className="flex justify-center mb-6">
+          <div className="inline-flex rounded-xl bg-soft-100 dark:bg-soft-800 p-1" role="tablist">
+            {(['alternance', 'stage'] as CvVariant[]).map((v) => (
+              <button
+                key={v}
+                role="tab"
+                aria-selected={variant === v}
+                onClick={() => setVariant(v)}
+                className={`px-4 py-1.5 rounded-lg text-sm font-medium transition-colors ${
+                  variant === v
+                    ? 'bg-white dark:bg-soft-700 text-primary-600 dark:text-primary-300 shadow-sm'
+                    : 'text-soft-500 hover:text-primary-500'
+                }`}
+              >
+                {t(`cv.variants.${v}`)}
+              </button>
+            ))}
           </div>
         </div>
 
-        {pdfAvailable ? (
-          <div className="bg-white dark:bg-soft-800 rounded-2xl shadow-sm border border-soft-100 dark:border-soft-700 overflow-hidden">
-            <iframe
-              src={cvPath}
-              className="w-full"
-              style={{ height: 'calc(100vh - 200px)', minHeight: '600px' }}
-              title={t('cv.title')}
-            />
-          </div>
-        ) : (
-          <CvGenerated />
-        )}
+        <div className="bg-white dark:bg-soft-800 rounded-2xl shadow-sm border border-soft-100 dark:border-soft-700 overflow-hidden">
+          <iframe
+            key={cvPath}
+            src={cvPath}
+            className="w-full"
+            style={{ height: 'calc(100vh - 200px)', minHeight: '600px' }}
+            title={t('cv.title')}
+          />
+        </div>
       </div>
     </div>
   );

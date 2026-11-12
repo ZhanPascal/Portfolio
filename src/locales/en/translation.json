@@ -10,25 +10,34 @@
   },
   "hero": {
     "greeting": "Hi, I'm",
-    "title": "DevOps Developer & Cybersecurity Student",
-    "tagline": "Actively seeking: M2 Apprenticeship",
+    "title": "Software Engineer & Cybersecurity",
+    "tagline": "Actively seeking: M2 Apprenticeship or End-of-studies Internship (April – September 2027)",
     "cta": "Get in touch",
     "viewCv": "View my Resume"
   },
   "about": {
     "title": "About Me",
-    "p1": "Master 1 Computer Science student specializing in Systems Design and Cybersecurity at UPEC, I combine solid professional experience in full-stack development and DevOps with a strong interest in Artificial Intelligence, Data Science and cybersecurity.",
-    "p2": "With 2+ years of apprenticeship at CGI France, I developed an infrastructure management portal in Java/Vue.js, automated the management of over 2,000 virtual machines and built a self-provisioning application that reduced deployment delays from 2 weeks to 2 hours (-98%).",
+    "p1": "Master 2 Computer Science student specializing in Systems Design and Cybersecurity at UPEC, I combine professional experience in software development, safety-critical embedded systems and DevOps with a strong interest in cybersecurity and Artificial Intelligence.",
+    "p2": "I recently completed an embedded software engineering internship at Siemens Mobility (April – September 2026), working on the migration of an internal Ada code generation tool for CBTC (Communication-Based Train Control) system equipment. Before that, during a 2-year apprenticeship at CGI France, I automated the management of over 2,000 virtual machines and built a self-provisioning application that reduced deployment delays from 2 weeks to 2 hours (-98%).",
     "p3": "TOP 6 finalist at the AgentsIRL 2025 Hackathon with TruthTrace, an automated AI debate analysis application combining multi-agent orchestration (LangGraph), audio transcription (OpenAI Whisper) and semantic analysis (Mistral), deployed on Google Cloud Run.",
-    "p4": "Currently working on an IoT project (ESP32 weather station + MicroPython + MQTT) and deepening my knowledge in offensive and defensive cybersecurity as part of my Master's program.",
+    "p4": "Alongside my Master's, I build personal projects: CSTracker, a League of Legends esports statistics platform (Node.js, React, PostgreSQL), and BambooTrace, an Android Chinese calligraphy app with a low-latency drawing engine (Kotlin, Jetpack Compose).",
     "bilingual": "Native French-Chinese bilingual (母语), an asset for communication within international teams and technical translation.",
     "languages": "Languages: French (Native), Mandarin Chinese (Native / 母语), English (B2), Japanese (Basics), Korean (Basics)",
-    "interests": "Open to discussing opportunities in AI/Data Science, DevOps, Cybersecurity or IoT."
+    "interests": "I am looking for an M2 apprenticeship (1 week company / 1 week university) or an end-of-studies internship from April to September 2027, in software development, safety-critical embedded systems, cybersecurity or AI."
   },
   "experience": {
     "title": "Work Experience",
+    "siemens": {
+      "position": "Embedded Software Engineering Intern",
+      "type": "Internship (6 months)",
+      "description": "Internship within Siemens Mobility's CBTC (Communication-Based Train Control) teams, in a safety-critical railway embedded systems environment.",
+      "achievements": [
+        "Migration of an internal Ada code generation tool for CBTC system equipment",
+        "Environment: Ada, safety-critical embedded systems, CBTC"
+      ]
+    },
     "cgi": {
-      "position": "Java / DevOps Developer",
+      "position": "DevOps Developer",
       "type": "Apprenticeship (2 years)",
       "description": "Full-stack development of an internal infrastructure management portal automating secure deployment of project environments. Stack: Java, Vue.js, PostgreSQL, Docker, Jenkins.",
       "achievements": [
@@ -45,9 +54,9 @@
   "education": {
     "title": "Education",
     "upec": {
-      "degree": "Master 1 Computer Science",
+      "degree": "Master 2 Computer Science",
       "specialization": "Systems Design & Cybersecurity",
-      "description": "Specialized training in cybersecurity and computer systems design. Alternating schedule: 1 week university / 1 week company.",
+      "description": "Specialized training in cybersecurity and computer systems design (2025 – 2027). Courses: security auditing, governance, pentesting, IoT security, network security.",
       "current": "In progress"
     },
     "but": {
@@ -75,19 +84,49 @@
         "results": "TOP 6 ranking at the hackathon. Functional application with interactive color-coded timeline, 4-level fact-checking verification and speaker scoring across 6 dimensions (factual accuracy, evidence quality, persuasiveness, etc.)."
       }
     },
-    "esp32": {
-      "subtitle": "IoT Weather Station",
-      "description": "Real-time environmental data collection and analysis system. Complete architecture: ESP32 + DHT11 sensor, MicroPython firmware, MQTT protocol, Flask + PostgreSQL backend, fully containerized with Docker.",
+    "cstracker": {
+      "subtitle": "League of Legends Esports Statistics",
+      "description": "League of Legends esports tracking platform: player search by name/tag (ranked stats, champion mastery, match history), per-champion leaderboards and coverage of official tournaments (LCK, LEC, LCS, LPL, MSI, Worlds) with scores, standings, rosters and brackets.",
       "detail": {
-        "context": "Personal project aimed at designing a complete end-to-end IoT system: from sensor data collection to web visualization, including communication protocol and database storage.",
-        "role": "Design and development of the entire architecture: ESP32 firmware, MQTT broker, backend API and Docker containerization.",
+        "context": "Personal project aimed at building a complete full-stack web application around real esports data, aggregating several external APIs (Riot Games, Leaguepedia, LoL Esports).",
+        "role": "Design and development of the whole application: backend API, data model, React frontend and containerization.",
         "challenges": [
-          "ESP32 firmware programming in MicroPython with WiFi connection and MQTT protocol management",
-          "Setting up an MQTT broker for real-time communication between sensor and server",
-          "Flask API design with PostgreSQL storage for measurement history",
-          "Containerization of all services (backend, database, broker) with Docker Compose"
+          "Aggregating several external APIs with different data formats and access constraints (Riot Games, DDragon, Leaguepedia, LoL Esports)",
+          "Caching player profiles in the database with on-demand refresh to limit Riot API calls",
+          "Automatic tournament format detection and generation of standings, head-to-head matrices and brackets (single, double elimination, mixed formats)",
+          "Layered backend architecture (routes, controllers, services) with Express 5, TypeScript and Prisma, documented with Swagger"
         ],
-        "results": "Functional system collecting temperature and humidity data in real-time with history accessible via REST API. Reproducible architecture thanks to Docker."
+        "results": "Working platform covering 7 regions and the main official competitions, deployable with a single Docker Compose command (frontend, API, PostgreSQL, nginx)."
+      }
+    },
+    "bambootrace": {
+      "subtitle": "Android Chinese Calligraphy App",
+      "description": "Android app for practicing Chinese calligraphy with real-time brush simulation. Low-latency drawing engine (<10 ms), pixel-analysis scoring system and 5 calligraphy styles (楷書, 行書, 隸書, 草書, 篆書).",
+      "detail": {
+        "context": "Personal project combining my Chinese heritage with mobile development: a calligraphy app designed for stylus tablets that scores the user's handwriting against a model character.",
+        "role": "Full design and development of the app: MVVM architecture, drawing engine, scoring algorithm and UI.",
+        "challenges": [
+          "Moving from Compose Canvas to a GPU-accelerated SurfaceView on a dedicated thread to reach under 10 ms stroke latency",
+          "Realistic brush simulation: width varying with stylus speed and pressure, multi-layer rendering to imitate ink spread",
+          "Scoring algorithm based on rasterization and pixel-by-pixel comparison with the target character, with a penalty for excess ink",
+          "MVVM architecture with Hilt, Room and Coroutines/Flow, hybrid Jetpack Compose / Views UI"
+        ],
+        "results": "Working app with smooth drawing (60 fps), guide grids (米字格, 田字格, 九宫格) and multi-cell practice with independent scoring. Planned: stroke order animation and history."
+      }
+    },
+    "ratp": {
+      "subtitle": "Real-time Connected Display",
+      "description": "M1 IoT project: an ESP32 connected device showing upcoming Paris RER, Metro and Bus departures in real time on an LCD screen, using the Île-de-France Mobilités PRIM API. Station configurable from a Node-RED dashboard or over MQTT, with InfluxDB history and Grafana dashboards.",
+      "detail": {
+        "context": "Individual project for the IoT module of the Master 1 in Systems Design and Cybersecurity (UPEC, 2025-2026). The goal was to build a complete connected device following a layered IoT architecture: field (ESP32 + LCD screen), middleware (MQTT + Node-RED) and data (InfluxDB + Grafana).",
+        "role": "Built the whole project: ESP32 firmware in C++, Node-RED flow (backend and dashboard), MQTT protocol, InfluxDB data schema, Grafana dashboards and Docker Compose infrastructure.",
+        "challenges": [
+          "ESP32 firmware in C++ (Arduino): WiFi and MQTT with automatic reconnection, 16×2 I2C LCD with scrolling text, navigation between departures using the capacitive touch sensor (500 ms debounce)",
+          "Design of a bidirectional MQTT protocol (schedules, station change, configuration, telemetry, acknowledgements) with a minified JSON payload to save bandwidth",
+          "Using the PRIM API in SIRI format: station search, wait time computation, 3 filtering modes by line and terminus, polling every minute to stay within the ~1,000 requests/day quota",
+          "Device telemetry (RSSI, free memory, uptime, errors) at a remotely configurable interval, stored in InfluxDB and visualized in Grafana (Flux queries: wait times, intervals between trains per line)"
+        ],
+        "results": "All 7 required features delivered. System validated during a test session of almost 8 hours at Gare du Nord (RER D towards Melun): stable WiFi/MQTT connection and consistent data in InfluxDB and Grafana."
       }
     },
     "security": {
@@ -217,29 +256,41 @@
     "title": "Technical Skills",
     "categories": {
       "languages": "Programming Languages",
+      "web": "Web & Full-stack Development",
+      "mobile": "Mobile Development",
       "ai-data": "AI & Data Science",
       "devops": "DevOps & Cloud",
       "databases": "Databases",
       "security": "Cybersecurity",
-      "iot": "IoT & Embedded Systems",
+      "iot": "Embedded Systems & IoT",
       "tools": "Tools & Methodologies"
     }
   },
+  "labels": {
+    "cryptography": "Cryptography",
+    "vulnerability-analysis": "Vulnerability analysis",
+    "security-audit": "Security auditing",
+    "unit-regression-tests": "Unit / Regression testing",
+    "critical-embedded": "Safety-critical embedded systems",
+    "code-generation": "Code generation"
+  },
   "contact": {
     "title": "Get In Touch",
-    "subtitle": "I'm currently seeking an M1 internship (April-September 2026) and an M2 apprenticeship. Feel free to reach out!",
+    "subtitle": "I'm actively looking for an M2 apprenticeship or an end-of-studies internship. Feel free to reach out!",
     "email": "Email",
     "availability": "Availability",
-    "internship": "M1 Internship: April - September 2026",
-    "alternance": "M2 Apprenticeship: Starting September 2026",
+    "alternance": "M2 Apprenticeship: as soon as possible, until September 2027 (1 week / 1 week schedule)",
+    "internship": "M2 end-of-studies internship: April – September 2027",
     "sendEmail": "Send an email"
   },
   "cv": {
     "title": "My Resume",
     "download": "Download Resume",
-    "print": "Print Resume",
-    "back": "Back to portfolio",
-    "placeholder": "Resume will be available soon. Please check back later or contact me directly."
+    "variants": {
+      "alternance": "Apprenticeship Resume",
+      "stage": "Internship Resume"
+    },
+    "back": "Back to portfolio"
   },
   "footer": {
     "rights": "All rights reserved"

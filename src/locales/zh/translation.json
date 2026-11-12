@@ -10,25 +10,34 @@
   },
   "hero": {
     "greeting": "你好，我是",
-    "title": "DevOps 开发工程师 & 网络安全学生",
-    "tagline": "正在寻找：M2学徒制",
+    "title": "软件工程师 & 网络安全",
+    "tagline": "正在寻找：M2学徒制或毕业实习（2027年4月 – 9月）",
     "cta": "联系我",
     "viewCv": "查看简历"
   },
   "about": {
     "title": "关于我",
-    "p1": "UPEC 计算机科学硕士一年级学生，主攻系统设计与网络安全方向。我将全栈开发和DevOps的丰富专业经验与对人工智能、数据科学和网络安全的浓厚兴趣相结合。",
-    "p2": "在CGI France进行了2年以上的学徒制期间，我开发了一个Java/Vue.js基础设施管理门户，自动化管理了2000多台虚拟机，并构建了一个自助部署应用，将部署时间从2周缩短至2小时（-98%）。",
+    "p1": "UPEC 计算机科学硕士二年级学生，主攻系统设计与网络安全方向。我将软件开发、安全关键嵌入式系统和DevOps方面的专业经验与对网络安全和人工智能的浓厚兴趣相结合。",
+    "p2": "我最近在西门子交通（Siemens Mobility）完成了嵌入式软件工程实习（2026年4月 – 9月），负责迁移用于CBTC（基于通信的列车控制）系统设备的内部Ada代码生成工具。此前，我在CGI France进行了2年的学徒制，自动化管理了2000多台虚拟机，并构建了一个自助部署应用，将部署时间从2周缩短至2小时（-98%）。",
     "p3": "凭借TruthTrace项目获得AgentsIRL 2025黑客松TOP 6名次。该项目是一个AI自动化辩论分析应用，结合了多智能体编排（LangGraph）、音频转录（OpenAI Whisper）和语义分析（Mistral），部署在Google Cloud Run上。",
-    "p4": "目前正在开发一个IoT项目（ESP32气象站 + MicroPython + MQTT），并在硕士课程中深入学习攻防网络安全知识。",
+    "p4": "在硕士学习之余，我还开发个人项目：CSTracker，一个英雄联盟电竞数据平台（Node.js、React、PostgreSQL）；以及BambooTrace，一款带有低延迟绘制引擎的安卓中国书法应用（Kotlin、Jetpack Compose）。",
     "bilingual": "法语-中文双母语（母语），这是国际团队沟通和技术翻译的重要优势。",
     "languages": "语言：法语（母语）、中文普通话（母语）、英语（B2）、日语（入门）、韩语（入门）",
-    "interests": "欢迎交流AI/数据科学、DevOps、网络安全或IoT领域的机会。"
+    "interests": "我正在寻找软件开发、安全关键嵌入式系统、网络安全或人工智能方向的M2学徒制岗位（一周企业 / 一周学校），或2027年4月至9月的毕业实习。"
   },
   "experience": {
     "title": "工作经历",
+    "siemens": {
+      "position": "嵌入式软件工程实习生",
+      "type": "实习（6个月）",
+      "description": "在西门子交通CBTC（基于通信的列车控制）团队实习，从事轨道交通安全关键嵌入式系统相关工作。",
+      "achievements": [
+        "迁移用于CBTC系统设备的内部Ada代码生成工具",
+        "技术环境：Ada、安全关键嵌入式系统、CBTC"
+      ]
+    },
     "cgi": {
-      "position": "Java / DevOps 开发工程师",
+      "position": "DevOps 开发工程师",
       "type": "学徒制（2年）",
       "description": "全栈开发内部基础设施管理门户，自动化项目环境的安全部署。技术栈：Java、Vue.js、PostgreSQL、Docker、Jenkins。",
       "achievements": [
@@ -45,9 +54,9 @@
   "education": {
     "title": "教育背景",
     "upec": {
-      "degree": "计算机科学硕士一年级",
+      "degree": "计算机科学硕士二年级",
       "specialization": "系统设计与网络安全",
-      "description": "网络安全和计算机系统设计专业培训。交替制学习：一周学校 / 一周企业。",
+      "description": "网络安全和计算机系统设计专业培训（2025 – 2027）。课程：安全审计、安全治理、渗透测试、物联网安全、网络安全。",
       "current": "进行中"
     },
     "but": {
@@ -75,19 +84,49 @@
         "results": "黑客松TOP 6名次。功能完整的应用，具有交互式彩色时间线、4级事实核查验证和6个维度的发言者评分（事实准确性、证据质量、说服力等）。"
       }
     },
-    "esp32": {
-      "subtitle": "IoT气象站",
-      "description": "实时环境数据采集与分析系统。完整架构：ESP32 + DHT11传感器、MicroPython固件、MQTT协议、Flask + PostgreSQL后端，全部通过Docker容器化。",
+    "cstracker": {
+      "subtitle": "英雄联盟电竞数据平台",
+      "description": "英雄联盟电竞追踪平台：按游戏名/标签搜索玩家（排位数据、英雄熟练度、比赛历史）、英雄排行榜，以及官方赛事（LCK、LEC、LCS、LPL、MSI、全球总决赛）的比分、积分榜、阵容和对阵图。",
       "detail": {
-        "context": "个人项目，旨在设计一个完整的端到端IoT系统：从传感器数据采集到网页可视化，包括通信协议和数据库存储。",
-        "role": "设计和开发整个架构：ESP32固件、MQTT代理、后端API和Docker容器化。",
+        "context": "个人项目，旨在围绕真实电竞数据构建一个完整的全栈Web应用，整合多个外部API（Riot Games、Leaguepedia、LoL Esports）。",
+        "role": "独立设计和开发整个应用：后端API、数据模型、React前端和容器化。",
         "challenges": [
-          "使用MicroPython编程ESP32固件，管理WiFi连接和MQTT协议",
-          "搭建MQTT代理实现传感器与服务器之间的实时通信",
-          "设计Flask API并使用PostgreSQL存储测量历史数据",
-          "使用Docker Compose容器化所有服务（后端、数据库、代理）"
+          "整合多个数据格式和访问限制各不相同的外部API（Riot Games、DDragon、Leaguepedia、LoL Esports）",
+          "在数据库中缓存玩家资料并支持按需刷新，以减少Riot API调用",
+          "自动识别赛事赛制，生成积分榜、交锋矩阵和对阵图（单败、双败及混合赛制）",
+          "基于Express 5、TypeScript和Prisma的分层后端架构（路由、控制器、服务），并使用Swagger编写文档"
         ],
-        "results": "功能完整的系统，实时采集温度和湿度数据，历史记录可通过REST API查询。借助Docker实现可复现的架构。"
+        "results": "功能完整的平台，覆盖7个服务器区域和主要官方赛事，可通过一条Docker Compose命令部署（前端、API、PostgreSQL、nginx）。"
+      }
+    },
+    "bambootrace": {
+      "subtitle": "安卓中国书法应用",
+      "description": "用于练习中国书法的安卓应用，实时模拟毛笔效果。低延迟绘制引擎（<10毫秒）、基于像素分析的评分系统，支持5种书体（楷書、行書、隸書、草書、篆書）。",
+      "detail": {
+        "context": "个人项目，将我的中国文化背景与移动开发相结合：一款为手写笔平板设计的书法应用，将用户的书写与范字进行对比并评分。",
+        "role": "独立完成应用的设计与开发：MVVM架构、绘制引擎、评分算法和界面。",
+        "challenges": [
+          "从Compose Canvas迁移到独立线程上的GPU加速SurfaceView，使笔迹延迟低于10毫秒",
+          "逼真的毛笔模拟：笔画粗细随手写笔速度和压力变化，多层渲染模拟墨迹晕染",
+          "基于光栅化与目标字逐像素比对的评分算法，并对多余墨迹进行扣分",
+          "采用Hilt、Room和Coroutines/Flow的MVVM架构，Jetpack Compose与传统View混合界面"
+        ],
+        "results": "功能完整的应用，书写流畅（60 fps），提供米字格、田字格、九宫格辅助线，多格练习独立评分。计划中：笔顺动画和练习历史。"
+      }
+    },
+    "ratp": {
+      "subtitle": "物联网实时显示设备",
+      "description": "M1物联网项目：基于ESP32的联网设备，通过法兰西岛交通局PRIM API在LCD屏幕上实时显示巴黎RER、地铁和公交的下一班车次。可通过Node-RED仪表盘或MQTT配置站点，使用InfluxDB记录历史数据并通过Grafana可视化。",
+      "detail": {
+        "context": "UPEC硕士一年级系统设计与网络安全专业物联网课程的个人项目（2025-2026）。目标是按照分层物联网架构构建一个完整的联网设备：现场层（ESP32 + LCD屏幕）、中间件层（MQTT + Node-RED）和数据层（InfluxDB + Grafana）。",
+        "role": "独立完成整个项目：C++编写的ESP32固件、Node-RED流程（后端和仪表盘）、MQTT协议、InfluxDB数据结构、Grafana仪表盘以及Docker Compose基础设施。",
+        "challenges": [
+          "使用C++（Arduino）编写ESP32固件：WiFi和MQTT自动重连、I2C接口16×2 LCD滚动显示、通过电容触摸传感器切换车次（500毫秒防抖）",
+          "设计双向MQTT协议（时刻表、切换站点、配置、遥测、确认回执），使用精简JSON负载以节省带宽",
+          "调用SIRI格式的PRIM API：站点搜索、等待时间计算、按线路和终点站的3种过滤模式，每分钟轮询一次以符合约每天1000次请求的配额",
+          "可远程配置间隔的设备遥测（RSSI、可用内存、运行时间、错误），存储于InfluxDB并在Grafana中可视化（Flux查询：等待时间、各线路列车间隔）"
+        ],
+        "results": "完成全部7项需求功能。在巴黎北站（RER D线，开往Melun方向）进行了近8小时的测试，WiFi/MQTT连接稳定，InfluxDB和Grafana中的数据一致。"
       }
     },
     "security": {
@@ -217,29 +256,41 @@
     "title": "技术技能",
     "categories": {
       "languages": "编程语言",
+      "web": "Web与全栈开发",
+      "mobile": "移动开发",
       "ai-data": "人工智能与数据科学",
       "devops": "DevOps与云计算",
       "databases": "数据库",
       "security": "网络安全",
-      "iot": "物联网与嵌入式系统",
+      "iot": "嵌入式系统与物联网",
       "tools": "工具与方法论"
     }
   },
+  "labels": {
+    "cryptography": "密码学",
+    "vulnerability-analysis": "漏洞分析",
+    "security-audit": "安全审计",
+    "unit-regression-tests": "单元测试 / 回归测试",
+    "critical-embedded": "安全关键嵌入式系统",
+    "code-generation": "代码生成"
+  },
   "contact": {
     "title": "联系我",
-    "subtitle": "我正在寻找M1实习（2026年4月-9月）和M2学徒制。欢迎与我联系！",
+    "subtitle": "我正在积极寻找M2学徒制岗位或毕业实习。欢迎与我联系！",
     "email": "邮箱",
     "availability": "可用时间",
-    "internship": "M1实习：2026年4月 - 9月",
-    "alternance": "M2学徒制：2026年9月起",
+    "alternance": "M2学徒制：可随时入职，至2027年9月（一周企业 / 一周学校）",
+    "internship": "M2毕业实习：2027年4月 – 9月",
     "sendEmail": "发送邮件"
   },
   "cv": {
     "title": "我的简历",
     "download": "下载简历",
-    "print": "打印简历",
-    "back": "返回作品集",
-    "placeholder": "简历即将上线。请稍后再来查看或直接联系我。"
+    "variants": {
+      "alternance": "学徒制简历",
+      "stage": "实习简历"
+    },
+    "back": "返回作品集"
   },
   "footer": {
     "rights": "版权所有"

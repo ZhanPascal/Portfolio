@@ -46,10 +46,3 @@ body {
 .dark {
   color-scheme: dark;
 }
-
-/* Print styles for CV */
-@media print {
-  .no-print { display: none !important; }
-  body { background: white; }
-  .cv-container { box-shadow: none !important; border: none !important; }
-}

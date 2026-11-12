@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { FiArrowDown } from 'react-icons/fi';
 import { personalInfo } from '../../data/personal';
 import { Button } from '../common/Button';
-import heroBg from '../../assets/images/fond.png';
+import heroBg from '../../assets/images/fond.webp';
 
 export function Hero() {
   const { t } = useTranslation();

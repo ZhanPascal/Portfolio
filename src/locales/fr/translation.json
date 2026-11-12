@@ -10,25 +10,34 @@
   },
   "hero": {
     "greeting": "Bonjour, je suis",
-    "title": "Développeur DevOps & Étudiant en Cybersécurité",
-    "tagline": "Recherche active : Alternance M2",
+    "title": "Ingénieur Logiciel & Cybersécurité",
+    "tagline": "Recherche active : Alternance M2 ou Stage de fin d'études (avril – septembre 2027)",
     "cta": "Me contacter",
     "viewCv": "Voir mon CV"
   },
   "about": {
     "title": "À Propos",
-    "p1": "Étudiant en Master 1 Informatique parcours Conception des Systèmes et Cybersécurité à l'UPEC, je combine une solide expérience professionnelle en développement full-stack et DevOps avec un intérêt marqué pour l'Intelligence Artificielle, la Data Science et la cybersécurité.",
-    "p2": "Fort de 2+ ans d'alternance chez CGI France, j'ai développé un portail de gestion d'infrastructure en Java/Vue.js, automatisé la gestion de plus de 2000 machines virtuelles et conçu une application de self-provisioning qui a réduit les délais de déploiement de 2 semaines à 2 heures (-98%).",
+    "p1": "Étudiant en Master 2 Informatique parcours Conception des Systèmes et Cybersécurité à l'UPEC, je combine une expérience professionnelle en développement logiciel, systèmes embarqués critiques et DevOps avec un intérêt marqué pour la cybersécurité et l'Intelligence Artificielle.",
+    "p2": "J'ai récemment effectué un stage d'ingénieur logiciel embarqué chez Siemens Mobility (avril – septembre 2026), où j'ai travaillé sur la migration d'un outil interne de génération de code Ada pour les équipements du système CBTC (Communication-Based Train Control). Auparavant, en 2 ans d'alternance chez CGI France, j'ai automatisé la gestion de plus de 2 000 machines virtuelles et conçu une application de self-provisioning qui a réduit les délais de déploiement de 2 semaines à 2 heures (-98%).",
     "p3": "Finaliste TOP 6 du Hackathon AgentsIRL 2025 avec TruthTrace, une application d'analyse automatisée de débats par IA combinant orchestration multi-agents (LangGraph), transcription audio (OpenAI Whisper) et analyse sémantique (Mistral), déployée sur Google Cloud Run.",
-    "p4": "Actuellement, je travaille sur un projet IoT (station météo ESP32 + MicroPython + MQTT) et j'approfondis mes connaissances en cybersécurité offensive et défensive dans le cadre de mon Master.",
+    "p4": "En parallèle de mon Master, je développe des projets personnels : CSTracker, une plateforme de statistiques esports League of Legends (Node.js, React, PostgreSQL), et BambooTrace, une application Android de calligraphie chinoise avec un moteur de dessin basse latence (Kotlin, Jetpack Compose).",
     "bilingual": "Bilingue français-chinois natif (母语), un atout pour la communication au sein d'équipes internationales et la traduction technique.",
     "languages": "Langues : Français (Natif), Chinois Mandarin (Natif / 母语), Anglais (B2), Japonais (Notions), Coréen (Notions)",
-    "interests": "Disponible pour échanger sur des opportunités en IA/Data Science, DevOps, Cybersécurité ou IoT."
+    "interests": "Je recherche une alternance M2 (rythme 1 semaine entreprise / 1 semaine école) ou un stage de fin d'études d'avril à septembre 2027, en développement logiciel, systèmes embarqués critiques, cybersécurité ou IA."
   },
   "experience": {
     "title": "Expérience Professionnelle",
+    "siemens": {
+      "position": "Stagiaire Ingénieur Logiciel Embarqué",
+      "type": "Stage (6 mois)",
+      "description": "Stage au sein des équipes CBTC (Communication-Based Train Control) de Siemens Mobility, dans un environnement de systèmes embarqués critiques ferroviaires.",
+      "achievements": [
+        "Migration d'un outil interne de génération de code Ada pour les équipements du système CBTC",
+        "Environnement : Ada, systèmes embarqués critiques, CBTC"
+      ]
+    },
     "cgi": {
-      "position": "Développeur Java / DevOps",
+      "position": "Développeur DevOps",
       "type": "Alternance (2 ans)",
       "description": "Développement full-stack d'un portail interne de gestion d'infrastructure automatisant le déploiement sécurisé des environnements de projet. Stack : Java, Vue.js, PostgreSQL, Docker, Jenkins.",
       "achievements": [
@@ -45,9 +54,9 @@
   "education": {
     "title": "Formation",
     "upec": {
-      "degree": "Master 1 Informatique",
+      "degree": "Master 2 Informatique",
       "specialization": "Conception des Systèmes et Cybersécurité",
-      "description": "Formation spécialisée en cybersécurité et conception de systèmes informatiques. Rythme alternance 1 semaine école / 1 semaine entreprise.",
+      "description": "Formation spécialisée en cybersécurité et conception de systèmes informatiques (2025 – 2027). Modules : audit de sécurité, gouvernance, pentest, sécurité IoT, sécurité réseaux.",
       "current": "En cours"
     },
     "but": {
@@ -75,19 +84,49 @@
         "results": "Classement TOP 6 du hackathon. Application fonctionnelle avec timeline interactive colorée, fact-checking à 4 niveaux de vérification et scoring des intervenants sur 6 dimensions (exactitude factuelle, qualité des preuves, persuasion, etc.)."
       }
     },
-    "esp32": {
-      "subtitle": "Station Météorologique IoT",
-      "description": "Système de collecte et analyse de données environnementales en temps réel. Architecture complète : ESP32 + capteur DHT11, firmware MicroPython, protocole MQTT, backend Flask + PostgreSQL, le tout conteneurisé avec Docker.",
+    "cstracker": {
+      "subtitle": "Statistiques esports League of Legends",
+      "description": "Plateforme de suivi esports League of Legends : recherche de joueurs par pseudo/tag (stats classées, maîtrise des champions, historique des parties), classements par champion et couverture des tournois officiels (LCK, LEC, LCS, LPL, MSI, Worlds) avec scores, classements, rosters et brackets.",
       "detail": {
-        "context": "Projet personnel visant à concevoir un système IoT complet de bout en bout : de la collecte de données par capteur jusqu'à la visualisation web, en passant par le protocole de communication et le stockage en base de données.",
-        "role": "Conception et développement de l'ensemble de l'architecture : firmware ESP32, broker MQTT, backend API et conteneurisation Docker.",
+        "context": "Projet personnel visant à construire une application web full-stack complète autour de données esports réelles, en agrégeant plusieurs API externes (Riot Games, Leaguepedia, LoL Esports).",
+        "role": "Conception et développement de l'ensemble de l'application : API backend, modèle de données, frontend React et conteneurisation.",
         "challenges": [
-          "Programmation du firmware ESP32 en MicroPython avec gestion de la connexion WiFi et du protocole MQTT",
-          "Mise en place d'un broker MQTT pour la communication temps réel entre le capteur et le serveur",
-          "Conception de l'API Flask avec stockage PostgreSQL pour l'historique des mesures",
-          "Conteneurisation de l'ensemble des services (backend, base de données, broker) avec Docker Compose"
+          "Agrégation de plusieurs API externes aux formats et contraintes d'accès différents (Riot Games, DDragon, Leaguepedia, LoL Esports)",
+          "Mise en cache des profils joueurs en base de données avec rafraîchissement à la demande pour limiter les appels à l'API Riot",
+          "Détection automatique du format des tournois et génération des classements, matrices de confrontations directes et brackets (simple, double élimination, formats mixtes)",
+          "Architecture backend en couches (routes, contrôleurs, services) avec Express 5, TypeScript et Prisma, documentée via Swagger"
         ],
-        "results": "Système fonctionnel collectant température et humidité en temps réel avec historique consultable via une API REST. Architecture reproductible grâce à Docker."
+        "results": "Plateforme fonctionnelle couvrant 7 régions et les principales compétitions officielles, déployable en une commande avec Docker Compose (frontend, API, PostgreSQL, nginx)."
+      }
+    },
+    "bambootrace": {
+      "subtitle": "Application Android de calligraphie chinoise",
+      "description": "Application Android pour la pratique de la calligraphie chinoise avec simulation de pinceau en temps réel. Moteur de dessin basse latence (<10 ms), système de scoring par analyse de pixels et 5 styles de calligraphie (楷書, 行書, 隸書, 草書, 篆書).",
+      "detail": {
+        "context": "Projet personnel né de l'envie d'allier ma culture chinoise et le développement mobile : une application de calligraphie conçue pour tablette avec stylet, qui note l'écriture de l'utilisateur par rapport à un caractère modèle.",
+        "role": "Conception et développement complet de l'application : architecture MVVM, moteur de dessin, algorithme de scoring et interface.",
+        "challenges": [
+          "Passage de Compose Canvas à un SurfaceView accéléré GPU sur un thread dédié pour obtenir une latence de tracé inférieure à 10 ms",
+          "Simulation réaliste du pinceau : épaisseur variable selon la vitesse et la pression du stylet, rendu en plusieurs couches pour imiter la diffusion de l'encre",
+          "Algorithme de scoring par rastérisation et comparaison pixel à pixel avec le caractère cible, avec pénalité pour l'encre superflue",
+          "Architecture MVVM avec Hilt, Room et Coroutines/Flow, interface hybride Jetpack Compose / Views"
+        ],
+        "results": "Application fonctionnelle avec tracé fluide (60 fps), grilles de guidage (米字格, 田字格, 九宫格), pratique multi-cases avec scoring indépendant. Évolutions prévues : animation de l'ordre des traits et historique."
+      }
+    },
+    "ratp": {
+      "subtitle": "Affichage temps réel sur objet connecté",
+      "description": "Projet M1 IoT : objet connecté ESP32 affichant sur écran LCD les prochains passages RER, Métro et Bus en temps réel via l'API PRIM d'Île-de-France Mobilités. Station configurable depuis un dashboard Node-RED ou par MQTT, historisation InfluxDB et tableaux de bord Grafana.",
+      "detail": {
+        "context": "Projet individuel du module IoT du Master 1 Conception des Systèmes et Cybersécurité (UPEC, 2025-2026). L'objectif était de concevoir un objet connecté complet suivant une architecture IoT en couches : terrain (ESP32 + écran LCD), middleware (MQTT + Node-RED) et données (InfluxDB + Grafana).",
+        "role": "Réalisation complète du projet : firmware ESP32 en C++, flow Node-RED (backend et dashboard), protocole MQTT, schéma de données InfluxDB, tableaux de bord Grafana et infrastructure Docker Compose.",
+        "challenges": [
+          "Firmware ESP32 en C++ (Arduino) : WiFi et MQTT avec reconnexion automatique, écran LCD 16×2 en I2C avec défilement du texte, navigation entre les passages via le capteur tactile capacitif (anti-rebond 500 ms)",
+          "Conception d'un protocole MQTT bidirectionnel (horaires, changement de station, configuration, télémétrie, accusés de réception) avec un payload JSON minifié pour limiter la bande passante",
+          "Exploitation de l'API PRIM au format SIRI : recherche de stations, calcul des temps d'attente, 3 modes de filtrage par ligne et terminus, interrogation toutes les minutes pour respecter le quota d'environ 1 000 requêtes par jour",
+          "Télémétrie de l'appareil (RSSI, mémoire libre, uptime, erreurs) à intervalle configurable à distance, stockée dans InfluxDB et visualisée dans Grafana (requêtes Flux : temps d'attente, intervalles entre trains par ligne)"
+        ],
+        "results": "Les 7 fonctionnalités du cahier des charges sont réalisées. Système validé lors d'une session de test de près de 8 heures à Gare du Nord (RER D, direction Melun) : connexion WiFi/MQTT stable et données cohérentes dans InfluxDB et Grafana."
       }
     },
     "security": {
@@ -217,29 +256,41 @@
     "title": "Compétences Techniques",
     "categories": {
       "languages": "Langages de Programmation",
+      "web": "Développement Web & Full-stack",
+      "mobile": "Développement Mobile",
       "ai-data": "IA & Data Science",
       "devops": "DevOps & Cloud",
       "databases": "Bases de Données",
       "security": "Cybersécurité",
-      "iot": "IoT & Systèmes Embarqués",
+      "iot": "Systèmes Embarqués & IoT",
       "tools": "Outils & Méthodologies"
     }
   },
+  "labels": {
+    "cryptography": "Cryptographie",
+    "vulnerability-analysis": "Analyse de vulnérabilités",
+    "security-audit": "Audit de sécurité",
+    "unit-regression-tests": "Tests unitaires / Régression",
+    "critical-embedded": "Systèmes embarqués critiques",
+    "code-generation": "Génération de code"
+  },
   "contact": {
     "title": "Me Contacter",
-    "subtitle": "Je recherche actuellement un stage M1 (avril-septembre 2026) et une alternance M2. N'hésitez pas à me contacter !",
+    "subtitle": "Je recherche activement une alternance M2 ou un stage de fin d'études. N'hésitez pas à me contacter !",
     "email": "Email",
     "availability": "Disponibilité",
-    "internship": "Stage M1 : Avril - Septembre 2026",
-    "alternance": "Alternance M2 : À partir de septembre 2026",
+    "alternance": "Alternance M2 : dès que possible, jusqu'en septembre 2027 (rythme 1 semaine / 1 semaine)",
+    "internship": "Stage de fin d'études M2 : avril – septembre 2027",
     "sendEmail": "Envoyer un email"
   },
   "cv": {
     "title": "Mon CV",
     "download": "Télécharger le CV",
-    "print": "Imprimer le CV",
-    "back": "Retour au portfolio",
-    "placeholder": "Le CV sera bientôt disponible. Veuillez revenir plus tard ou me contacter directement."
+    "variants": {
+      "alternance": "CV Alternance",
+      "stage": "CV Stage"
+    },
+    "back": "Retour au portfolio"
   },
   "footer": {
     "rights": "Tous droits réservés"

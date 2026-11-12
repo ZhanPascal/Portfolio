@@ -16,7 +16,7 @@ export function Skills() {
             </h3>
             <div className="flex flex-wrap gap-2">
               {category.skills.map((skill) => (
-                <SkillBadge key={skill} skill={skill} />
+                <SkillBadge key={skill} skill={t(`labels.${skill}`, { defaultValue: skill })} />
               ))}
             </div>
           </div>
